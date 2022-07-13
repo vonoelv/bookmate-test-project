@@ -54,7 +54,7 @@ public class TestBase {
         screenshotAs("Last screenshot");
         pageSource();
 
-        switch (config.tool().toLowerCase()) {
+        switch (config.tool()) {
             case "mobile_browserstack":
                 videoBrowserstack(sessionId);
                 break;
