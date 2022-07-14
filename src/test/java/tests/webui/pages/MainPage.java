@@ -60,14 +60,6 @@ public class MainPage {
         return this;
     }
 
-    @Step
-    public MainPage switchToLanguage(String language) {
-        $(".languages-button").click();
-        $(".languages__list").$(withText(language)).click();
-        acceptCookiesIfNeeded();
-        return this;
-    }
-
     public MainPage acceptCookiesIfNeeded() {
         for (int i = 0; i <= 8; i++) {
             if ($(".cookies-message").isDisplayed()) {

@@ -13,6 +13,7 @@ import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.v101.emulation.Emulation;
 import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.decorators.Decorated;
 
 import javax.annotation.CheckReturnValue;
@@ -29,6 +30,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static com.github.kklisura.cdt.services.utils.ProxyUtils.createProxy;
 import static com.github.kklisura.cdt.services.utils.ProxyUtils.createProxyFromAbstract;
+import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 
 public class Cdp {
@@ -99,5 +101,19 @@ public class Cdp {
                                         method, key -> createProxy(method.getReturnType(), invocationHandler)));
         invocationHandler.setChromeDevToolsService(devtools);
         return devtools;
+    }
+
+    public static void setAgentOverrideDependingOnTool(String tool) throws WebSocketServiceException, URISyntaxException {
+        //TODO: make more common
+        switch (tool) {
+            case "ui_selenoid":
+                ChromeDevToolsService devtools = Cdp.from(format("ws://selenoid.autotests.cloud:4444/devtools/%s/page", ((RemoteWebDriver) getWebDriver()).getSessionId().toString()));
+                devtools.getEmulation().setUserAgentOverride(requireNonNull(executeJavaScript("return navigator.userAgent;")),
+                        "en-US,en", null, null);
+                break;
+            case "ui_local":
+                Cdp.setUserAgentOverride("en-US,en");
+                break;
+        }
     }
 }

@@ -31,19 +31,9 @@ class LoginTests extends TestBase {
     @Override
     public void beforeEach() throws Exception {
         open("about:blank");
-        switch (config.tool()) {
-            case "ui_selenoid":
-                ChromeDevToolsService devtools = Cdp.from(format("ws://selenoid.autotests.cloud:4444/devtools/%s/page", ((RemoteWebDriver) getWebDriver()).getSessionId().toString()));
-                devtools.getEmulation().setUserAgentOverride(requireNonNull(executeJavaScript("return navigator.userAgent;")),
-                        "en-US,en", null, null);
-                break;
-            case "ui_local":
-                Cdp.setUserAgentOverride("en-US,en");
-                break;
-        }
+        Cdp.setAgentOverrideDependingOnTool(config.tool());
         open("");
         mainPage.acceptCookiesIfNeeded();
-        //.switchToLanguage("English");
     }
 
     @Test
