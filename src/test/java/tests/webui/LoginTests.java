@@ -2,7 +2,6 @@ package tests.webui;
 
 import com.github.kklisura.cdt.services.ChromeDevToolsService;
 import helpers.Cdp;
-import helpers.Location;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +14,8 @@ import tests.webui.pages.LoginPage;
 import tests.webui.pages.MainPage;
 import tests.webui.pages.SettingsPage;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static config.Project.config;
 import static java.lang.String.format;

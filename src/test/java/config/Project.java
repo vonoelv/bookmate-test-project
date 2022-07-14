@@ -24,7 +24,10 @@ public class Project {
                 validateProperty(config.key(), "key");
                 break;
             case "mobile_emulator":
+            case "mobile_real":
                 validateProperty(config.remoteDriver(), "remoteDriver");
+                validateProperty(config.deviceName(), "deviceName");
+                validateProperty(config.platformVersion(), "platformVersion");
                 break;
             default:
                 throw new IllegalStateException("Unexpected 'tool' value: " + config);

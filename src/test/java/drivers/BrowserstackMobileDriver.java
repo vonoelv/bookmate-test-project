@@ -1,8 +1,6 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.ProjectConfig;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +11,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static config.Project.config;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 import static org.hamcrest.Matchers.is;
@@ -20,7 +19,6 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    static final ProjectConfig CFG = ConfigFactory.create(ProjectConfig.class);
     private static final String endpointForApkUpload = "https://%s:%s@api-cloud.browserstack.com/app-automate/upload";
     private static final String UPLOADED_APK_URL = uploadAPK();
     private static final String remoteDriver = "http://hub.browserstack.com/wd/hub";
@@ -32,8 +30,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
-        mutableCapabilities.setCapability("browserstack.user", CFG.user());
-        mutableCapabilities.setCapability("browserstack.key", CFG.key());
+        mutableCapabilities.setCapability("browserstack.user", config.user());
+        mutableCapabilities.setCapability("browserstack.key", config.key());
         mutableCapabilities.setCapability("app", UPLOADED_APK_URL);
         mutableCapabilities.setCapability("device", "Samsung Galaxy S22 Ultra");
         mutableCapabilities.setCapability("os_version", "12.0");
@@ -58,7 +56,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         return given()
                 .multiPart("file", new File("src/test/resources/apk/Bookmate_8.0.3.apk"))
                 .when()
-                .post(format(endpointForApkUpload, CFG.user(), CFG.key()))
+                .post(format(endpointForApkUpload, config.user(), config.key()))
                 .then()
                 .statusCode(200)
                 .body("app_url", is(notNullValue()))

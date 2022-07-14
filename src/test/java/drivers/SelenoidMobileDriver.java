@@ -1,12 +1,9 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.ProjectConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
-import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -15,14 +12,9 @@ import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static config.Project.config;
 
 public class SelenoidMobileDriver implements WebDriverProvider {
-    static final ProjectConfig CFG = ConfigFactory.create(ProjectConfig.class);
-
-    SelenoidMobileDriver() {
-        assertThat(CFG.remoteDriver()).withFailMessage("CFG.remoteDriver() is null or empty").isNotEmpty();
-    }
 
     @Override
     @CheckReturnValue
@@ -43,7 +35,7 @@ public class SelenoidMobileDriver implements WebDriverProvider {
         options.setAppActivity("com.bookmate.app.LaunchActivity");
 
         try {
-            return new AndroidDriver(new URL(CFG.remoteDriver()), options);
+            return new AndroidDriver(new URL(config.remoteDriver()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

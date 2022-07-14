@@ -12,6 +12,7 @@ import tests.TestBase;
 import tests.mobile.pages.prelogin.WelcomePage;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 @Tag("Mobile")
 @Epic("Android")

@@ -12,5 +12,7 @@ public interface ProjectConfig extends Config {
     String tool();
     String user();
     String key();
+    String deviceName();
+    String platformVersion();
 }
 

@@ -1,30 +1,20 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.ProjectConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
 import javax.annotation.CheckReturnValue;
 import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.openqa.selenium.remote.CapabilityType.APPLICATION_NAME;
+import static config.Project.config;
 
-@ParametersAreNonnullByDefault
-public class EmulatorMobileDriver implements WebDriverProvider {
-    static final ProjectConfig CFG = ConfigFactory.create(ProjectConfig.class);
-
-    EmulatorMobileDriver() {
-        assertThat(CFG.remoteDriver()).withFailMessage("CFG.remoteDriver() is null or empty").isNotEmpty();
-    }
+public class LocalMobileDriver implements WebDriverProvider {
 
     @Override
     @CheckReturnValue
@@ -33,9 +23,9 @@ public class EmulatorMobileDriver implements WebDriverProvider {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
-        options.setDeviceName("Pixel_4_API_30");
-        options.setPlatformVersion("11.0");
-        options.setCapability(APPLICATION_NAME, "Appium");
+        options.setCapability("uiautomator2ServerInstallTimeout", 90000);
+        options.setDeviceName(config.deviceName());
+        options.setPlatformVersion(config.platformVersion());
         options.setApp(getApk().getAbsolutePath());
         options.setLocale("en");
         options.setLanguage("en");
@@ -43,7 +33,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         options.setAppActivity("com.bookmate.app.LaunchActivity");
 
         try {
-            return new AndroidDriver(new URL(CFG.remoteDriver()), options);
+            return new AndroidDriver(new URL(config.remoteDriver()), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
