@@ -1,7 +1,5 @@
 package tests.webui;
 
-import com.github.kklisura.cdt.services.exceptions.WebSocketServiceException;
-import helpers.Cdp;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,10 +10,7 @@ import tests.TestBase;
 import tests.webui.pages.MainPage;
 import tests.webui.pages.SearchPage;
 
-import java.net.URISyntaxException;
-
 import static com.codeborne.selenide.Selenide.open;
-import static config.Project.config;
 
 @Tag("WebUI")
 @Story("Search")
