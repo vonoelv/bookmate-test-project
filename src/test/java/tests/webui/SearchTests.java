@@ -27,9 +27,7 @@ class SearchTests extends TestBase {
 
     @BeforeEach
     @Override
-    public void beforeEach() throws Exception {
-        open("about:blank");
-        Cdp.setAgentOverrideDependingOnTool(config.tool());
+    public void beforeEach() {
         open("");
         mainPage.acceptCookiesIfNeeded();
     }

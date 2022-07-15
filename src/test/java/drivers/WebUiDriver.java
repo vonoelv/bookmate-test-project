@@ -1,44 +1,57 @@
 package drivers;
 
 import com.codeborne.selenide.Configuration;
-import config.Project;
-import config.ProjectConfig;
-import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import static config.Project.config;
-import static org.assertj.core.api.Assertions.assertThat;
+import static config.Project.isRemoteDriver;
 
 public class WebUiDriver {
 
-    public static void createDriver() {
+    public static void configure() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://bookmate.com";
         Configuration.browser = config.browser();
-        if (!config.remoteDriver().isEmpty()) {
+        MutableCapabilities capabilities = new DesiredCapabilities();
+        if (isRemoteDriver()) {
             Configuration.remote = config.remoteDriver();
-        }
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-infobars");
-        chromeOptions.addArguments("--disable-popup-blocking");
-        chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--lang=en-US");
-        chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        if (!config.remoteDriver().isEmpty()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }
-        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        Configuration.browserCapabilities = capabilities;
+
+        switch (config.browser()) {
+            case "chrome":
+                setChromeOptions(capabilities);
+                break;
+            case "firefox":
+                setFirefoxOptions(capabilities);
+                break;
+            default:
+                Configuration.browserCapabilities = capabilities;
+        }
+    }
+
+    public static void setChromeOptions(MutableCapabilities capabilities) {
+        Configuration.browserCapabilities = new ChromeOptions()
+                .addArguments("--no-sandbox")
+                .addArguments("--disable-infobars")
+                .addArguments("--disable-popup-blocking")
+                .addArguments("--disable-notifications")
+                .addArguments("--lang=en-US")
+                .setExperimentalOption("excludeSwitches", new String[]{"enable-automation"})
+                .merge(capabilities);
+    }
+
+    public static void setFirefoxOptions(MutableCapabilities capabilities) {
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("intl.accept_languages", "en-US");
+        Configuration.browserCapabilities = new FirefoxOptions()
+                .setProfile(profile)
+                .merge(capabilities);
+
     }
 }

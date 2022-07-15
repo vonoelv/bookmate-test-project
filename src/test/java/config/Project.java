@@ -43,4 +43,8 @@ public class Project {
     public static void validateProperty(String propertyValue, String propertyName) {
         assertThat(propertyValue).withFailMessage("'%s' value is null or empty", propertyName).isNotEmpty();
     }
+
+    public static boolean isRemoteDriver() {
+        return !config.remoteDriver().isEmpty();
+    }
 }

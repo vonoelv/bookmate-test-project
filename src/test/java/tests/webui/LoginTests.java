@@ -1,25 +1,17 @@
 package tests.webui;
 
-import com.github.kklisura.cdt.services.ChromeDevToolsService;
-import helpers.Cdp;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import tests.TestBase;
 import tests.webui.pages.LoginPage;
 import tests.webui.pages.MainPage;
 import tests.webui.pages.SettingsPage;
 
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static config.Project.config;
-import static java.lang.String.format;
-import static java.util.Objects.requireNonNull;
 
 @Tag("WebUI")
 @Story("Login")
@@ -29,9 +21,7 @@ class LoginTests extends TestBase {
 
     @BeforeEach
     @Override
-    public void beforeEach() throws Exception {
-        open("about:blank");
-        Cdp.setAgentOverrideDependingOnTool(config.tool());
+    public void beforeEach() {
         open("");
         mainPage.acceptCookiesIfNeeded();
     }

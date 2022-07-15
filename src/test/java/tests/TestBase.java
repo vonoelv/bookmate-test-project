@@ -23,9 +23,9 @@ public class TestBase {
         addListener("AllureSelenide", new AllureSelenide());
 
         switch (config.tool()) {
-            case "ui_local":
             case "ui_selenoid":
-                WebUiDriver.createDriver();
+            case "ui_local":
+                WebUiDriver.configure();
                 break;
             case "mobile_selenoid":
                 Configuration.browser = SelenoidMobileDriver.class.getName();
@@ -42,7 +42,7 @@ public class TestBase {
     }
 
     @BeforeEach
-    public void beforeEach() throws Exception {
+    public void beforeEach() {
         open();
     }
 
@@ -62,7 +62,11 @@ public class TestBase {
             case "ui_remote":
                 videoSelenoid(sessionId);
             case "ui_local":
-                browserConsoleLogs();
+                //https://github.com/selenide/selenide/issues/1636
+                //https://stackoverflow.com/questions/59192232/selenium-trying-to-get-firefox-console-logs-results-in-webdrivererror-http-me
+                if (!config.browser().equals("firefox")) {
+                    browserConsoleLogs();
+                }
                 break;
         }
         closeWebDriver();

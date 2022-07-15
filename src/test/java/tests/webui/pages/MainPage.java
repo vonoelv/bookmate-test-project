@@ -38,10 +38,11 @@ public class MainPage {
         return loginPage;
     }
 
-    @Step("Open language menu")
+    @Step("Select site language: {language}")
     public MainPage selectLanguage(String language) {
         languageSelector.hover();
         languagesList.$(withText("English")).click();
+        acceptCookiesIfNeeded();
         return this;
     }
 
