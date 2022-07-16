@@ -13,6 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import static config.Project.config;
+import static java.lang.String.format;
 
 public class SelenoidMobileDriver implements WebDriverProvider {
 
@@ -35,7 +36,9 @@ public class SelenoidMobileDriver implements WebDriverProvider {
         options.setAppActivity("com.bookmate.app.LaunchActivity");
 
         try {
-            return new AndroidDriver(new URL(config.remoteDriver()), options);
+            String remoteDriverWithCredentials = config.remoteDriver()
+                    .replace("https://", format("https://%s:%s@", config.user(), config.key()));
+            return new AndroidDriver(new URL(remoteDriverWithCredentials), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

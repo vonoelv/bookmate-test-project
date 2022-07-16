@@ -2,17 +2,27 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-import static org.aeonbits.owner.Config.*;
+import static org.aeonbits.owner.Config.Sources;
 
-@Sources("classpath:config/config${propertyFilePostfix}.properties")
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Sources({"system:properties",
+        "classpath:config/project-${runIn}.properties",
+        "classpath:config/project.properties",
+})
 public interface ProjectConfig extends Config {
 
     String remoteDriver();
+
     String browser();
-    String tool();
+
+    String runIn();
+
     String user();
+
     String key();
+
     String deviceName();
+
     String platformVersion();
 }
 

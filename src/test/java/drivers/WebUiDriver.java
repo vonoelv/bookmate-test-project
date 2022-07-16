@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static config.Project.config;
 import static config.Project.isRemoteDriver;
+import static java.lang.String.format;
 
 public class WebUiDriver {
 
@@ -18,7 +19,8 @@ public class WebUiDriver {
         Configuration.browser = config.browser();
         MutableCapabilities capabilities = new DesiredCapabilities();
         if (isRemoteDriver()) {
-            Configuration.remote = config.remoteDriver();
+            Configuration.remote = config.remoteDriver()
+                    .replace("https://", format("https://%s:%s@", config.user(), config.key()));
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }

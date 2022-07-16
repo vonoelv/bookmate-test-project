@@ -22,19 +22,19 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        switch (config.tool()) {
-            case "ui_selenoid":
-            case "ui_local":
+        switch (config.runIn()) {
+            case "browser_selenoid":
+            case "browser_local":
                 WebUiDriver.configure();
                 break;
-            case "mobile_selenoid":
+            case "android_selenoid":
                 Configuration.browser = SelenoidMobileDriver.class.getName();
                 break;
-            case "mobile_browserstack":
+            case "android_browserstack":
                 Configuration.browser = BrowserstackMobileDriver.class.getName();
                 break;
-            case "mobile_emulator":
-            case "mobile_real":
+            case "android_emulator":
+            case "android_real":
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
         }
@@ -52,16 +52,17 @@ public class TestBase {
         screenshotAs("Last screenshot");
         pageSource();
 
-        switch (config.tool()) {
-            case "mobile_browserstack":
+        switch (config.runIn()) {
+            case "android_browserstack":
                 videoBrowserstack(sessionId);
+                browserstackFullInfoLink(sessionId);
                 break;
-            case "mobile_selenoid":
+            case "android_selenoid":
                 videoSelenoid(sessionId);
                 break;
-            case "ui_remote":
+            case "browser_remote":
                 videoSelenoid(sessionId);
-            case "ui_local":
+            case "browser_local":
                 //https://github.com/selenide/selenide/issues/1636
                 //https://stackoverflow.com/questions/59192232/selenium-trying-to-get-firefox-console-logs-results-in-webdrivererror-http-me
                 if (!config.browser().equals("firefox")) {

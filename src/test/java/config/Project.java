@@ -10,21 +10,21 @@ public class Project {
 
     static {
         String errorMessage = "'%s' value is null or empty";
-        assertThat(config.tool()).withFailMessage(errorMessage, "tool").isNotEmpty();
-        switch (config.tool()) {
-            case "ui_selenoid":
+        assertThat(config.runIn()).withFailMessage(errorMessage, "tool").isNotEmpty();
+        switch (config.runIn()) {
+            case "browser_selenoid":
                 validateProperty(config.remoteDriver(), "remoteDriver");
-            case "ui_local":
+            case "browser_local":
                 validateProperty(config.browser(), "browser");
                 break;
-            case "mobile_selenoid":
+            case "android_selenoid":
                 validateProperty(config.remoteDriver(), "remoteDriver");
-            case "mobile_browserstack":
+            case "android_browserstack":
                 validateProperty(config.user(), "user");
                 validateProperty(config.key(), "key");
                 break;
-            case "mobile_emulator":
-            case "mobile_real":
+            case "android_emulator":
+            case "android_real":
                 validateProperty(config.remoteDriver(), "remoteDriver");
                 validateProperty(config.deviceName(), "deviceName");
                 validateProperty(config.platformVersion(), "platformVersion");
@@ -33,7 +33,7 @@ public class Project {
                 throw new IllegalStateException("Unexpected 'tool' value: " + config);
         }
         System.out.println("CONFIG:");
-        System.out.println(config.tool());
+        System.out.println(config.runIn());
         System.out.println(config.remoteDriver());
         System.out.println(config.browser());
         System.out.println(config.user());
