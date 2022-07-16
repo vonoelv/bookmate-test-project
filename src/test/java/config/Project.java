@@ -38,6 +38,8 @@ public class Project {
         System.out.println(config.browser());
         System.out.println(config.user());
         System.out.println(config.key());
+        System.out.println(config.deviceName());
+        System.out.println(config.platformVersion());
     }
 
     public static void validateProperty(String propertyValue, String propertyName) {
