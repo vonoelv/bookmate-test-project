@@ -28,7 +28,7 @@ class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("An existing book can be found: updated name")
+    @DisplayName("An existing book can be found")
     void searchTest() {
         open("/search");
         searchPage

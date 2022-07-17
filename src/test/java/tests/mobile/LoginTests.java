@@ -2,9 +2,9 @@ package tests.mobile;
 
 
 import io.appium.java_client.AppiumBy;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,7 +13,6 @@ import tests.TestBase;
 import tests.mobile.pages.prelogin.WelcomePage;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.switchTo;
 
 @Tag("Mobile")
 @Feature("Login")
@@ -33,6 +32,7 @@ class LoginTests extends TestBase {
     }
 
     @Test
+    @Story("Login by email")
     @DisplayName("Login is successful for a valid user")
     void checkLoginAndAdded() {
         new WelcomePage()

@@ -2,6 +2,7 @@ package tests.webui;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -27,6 +28,7 @@ class LoginTests extends TestBase {
     }
 
     @Test
+    @Story("Login by email")
     @DisplayName("Successful login through UI")
     void checkLogin() {
         mainPage.login("jojiyik256@lenfly.com", "qwerty")
@@ -35,6 +37,7 @@ class LoginTests extends TestBase {
     }
 
     @Test
+    @Story("Login by email")
     @DisplayName("Unsuccessful login through UI - incorrect password")
     void checkLoginWithWrongPassword() {
         //gogib54376@satedly.com // qwerty12345
