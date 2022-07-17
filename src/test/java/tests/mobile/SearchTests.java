@@ -17,6 +17,7 @@ class SearchTests extends MainTests {
 
     @BeforeEach
     @Override
+    @DisplayName("Open the app, login and open Library page")
     public void beforeEach() {
         super.beforeEach();
         loginWithAnyAvailableUser().openLibrary();

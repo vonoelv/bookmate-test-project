@@ -9,6 +9,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -42,11 +43,13 @@ public class TestBase {
     }
 
     @BeforeEach
+    @DisplayName("Open the application(or browser)")
     public void beforeEach() {
         open();
     }
 
     @AfterEach
+    @DisplayName("Save artifacts and close webdriver")
     public void afterEach() {
         String sessionId = getSessionId();
         screenshotAs("Last screenshot");

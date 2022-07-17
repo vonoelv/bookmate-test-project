@@ -42,7 +42,6 @@ dependencies {
             "org.assertj:assertj-core:3.19.0",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "io.qameta.allure:allure-assertj:$allureVersion",
             "org.aspectj:aspectjweaver:1.9.6",
             "com.github.kklisura.cdt:cdt-java-client:4.0.0")
 
