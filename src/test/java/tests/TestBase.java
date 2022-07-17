@@ -5,6 +5,7 @@ import drivers.BrowserstackMobileDriver;
 import drivers.LocalMobileDriver;
 import drivers.SelenoidMobileDriver;
 import drivers.WebUiDriver;
+import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -43,13 +44,13 @@ public class TestBase {
     }
 
     @BeforeEach
-    @DisplayName("Open the application(or browser)")
+    @Step("Open the application(or browser)")
     public void beforeEach() {
         open();
     }
 
     @AfterEach
-    @DisplayName("Save artifacts and close webdriver")
+    @Step("Save artifacts and close webdriver")
     public void afterEach() {
         String sessionId = getSessionId();
         screenshotAs("Last screenshot");

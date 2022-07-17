@@ -3,6 +3,7 @@ package tests.webui;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -24,7 +25,7 @@ class SearchTests extends TestBase {
 
     @BeforeEach
     @Override
-    @DisplayName("Open https://bookmate.com/search")
+    @Step("Open https://bookmate.com/search")
     public void beforeEach() {
         open("/search");
         mainPage.acceptCookiesIfNeeded();

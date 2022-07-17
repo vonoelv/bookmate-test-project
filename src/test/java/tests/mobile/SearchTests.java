@@ -3,6 +3,7 @@ package tests.mobile;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -17,7 +18,7 @@ class SearchTests extends MainTests {
 
     @BeforeEach
     @Override
-    @DisplayName("Open the app, login and open Library page")
+    @Step("Open the app, login and open Library page")
     public void beforeEach() {
         super.beforeEach();
         loginWithAnyAvailableUser().openLibrary();
