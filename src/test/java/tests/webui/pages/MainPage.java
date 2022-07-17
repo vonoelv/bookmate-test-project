@@ -32,7 +32,7 @@ public class MainPage {
         return searchPage;
     }
 
-    @Step("Open login")
+    @Step("Open login dialog")
     public LoginPage openLoginDialog() {
         login.click();
         return loginPage;

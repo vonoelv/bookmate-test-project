@@ -10,7 +10,7 @@ public class SettingsPage {
 
     private final SelenideElement currentEmail = $("#user-current-email");
 
-    @Step
+    @Step("Verify current email is {expectedEmail}")
     public void checkEmail(String expectedEmail) {
         currentEmail.shouldHave(text(expectedEmail));
     }

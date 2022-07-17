@@ -10,14 +10,14 @@ public class SearchPage {
 
     public static final SelenideElement searchInput = $("#search-input");
 
-    @Step
+    @Step("Perform search for: {searchText}")
     public SearchPage performSearch(String searchText) {
         searchInput.click();
         searchInput.setValue(searchText);
         return this;
     }
 
-    @Step
+    @Step("Check title {expectedTitle} exists in the search results")
     public void checkTitleIsInResults(String expectedTitle) {
         //TODO: extract element
         //RECHECK THIS
