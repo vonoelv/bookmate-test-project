@@ -1,5 +1,6 @@
 package tests.webui;
 
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +15,7 @@ import tests.webui.pages.SettingsPage;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("WebUI")
-@Story("Login")
+@Feature("Login")
 @Owner("vonoelv")
 class LoginTests extends TestBase {
     public MainPage mainPage = new MainPage();

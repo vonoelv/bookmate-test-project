@@ -11,7 +11,6 @@ import tests.api.steps.ApiSteps;
 
 
 @Tag("API")
-@Story("API")
 @Owner("vonoelv")
 class ApiTests {
     ApiSteps apiSteps = new ApiSteps();

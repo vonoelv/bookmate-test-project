@@ -3,6 +3,7 @@ package tests.mobile;
 
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 @Tag("Mobile")
-@Epic("Android")
+@Feature("Login")
 @Owner("vonoelv")
 class LoginTests extends TestBase {
 

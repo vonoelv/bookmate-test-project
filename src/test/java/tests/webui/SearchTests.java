@@ -1,5 +1,7 @@
 package tests.webui;
 
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +15,7 @@ import tests.webui.pages.SearchPage;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("WebUI")
-@Story("Search")
+@Feature("Search")
 @Owner("vonoelv")
 class SearchTests extends TestBase {
 
