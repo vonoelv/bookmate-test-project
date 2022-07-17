@@ -1,5 +1,6 @@
 package tests.webui;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -15,6 +16,7 @@ import tests.webui.pages.SettingsPage;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("WebUI")
+@Epic("WebUI")
 @Feature("Login")
 @Owner("vonoelv")
 class LoginTests extends TestBase {

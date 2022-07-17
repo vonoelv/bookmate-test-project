@@ -1,5 +1,6 @@
 package tests.api;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -10,6 +11,7 @@ import tests.api.steps.ApiSteps;
 
 
 @Tag("API")
+@Epic("API")
 @Owner("vonoelv")
 class ApiTests {
     ApiSteps apiSteps = new ApiSteps();

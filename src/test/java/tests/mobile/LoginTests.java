@@ -2,6 +2,7 @@ package tests.mobile;
 
 
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -14,7 +15,8 @@ import tests.mobile.pages.prelogin.WelcomePage;
 
 import static com.codeborne.selenide.Selenide.$;
 
-@Tag("Mobile")
+@Tag("Android")
+@Epic("Android")
 @Feature("Login")
 @Owner("vonoelv")
 class LoginTests extends TestBase {
