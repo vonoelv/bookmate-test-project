@@ -59,7 +59,7 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        includeTags System.getProperty("tag").toString()
+        if (System.getProperty("tag") != null) includeTags System.getProperty("tag").toString()
     }
 
     testLogging {
