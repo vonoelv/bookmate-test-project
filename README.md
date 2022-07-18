@@ -199,7 +199,7 @@ platformVersion=
 [Back to the table of contents ⬆](#TableOfContents)
 
 # <a name="RunConfigurationsInIDEA">Run configurations in IDEA</a>
-For convenience of running tests IDEA run configurations are committed in this project
+For convenience of running tests, IDEA run configurations are committed to this project
 <p  align="center">
 <img src="images/screens/IDEARunConfigurations1.png" alt="IDEARunConfigurations1" width="550">
 </p>
@@ -244,7 +244,7 @@ Telegram bot sends a brief report to a specified telegram chat by results of eac
 
 # <a name="AllureReport">Allure Report[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
 
-#### Main page
+## Main page
 Main page of Allure report contains the following blocks:
 
 >- <code><strong>*ALLURE REPORT*</strong></code> - displays date and time of the test, overall number of launched tests, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
@@ -255,9 +255,14 @@ Main page of Allure report contains the following blocks:
   <img src="images/screens//AllureReportMain.png" alt="AllureReportMain" width="950">
 </p>
 
-### List of tests with steps and test artefacts
+## List of tests with steps and test artefacts
 On the page the list of the tests grouped by suites with status shown for each test.\
-Full info about each test can be shown: tags, severity, duration, detailed steps.\
+Full info about each test can be shown: tags, severity, duration, detailed steps.
+
+<p align="center">
+  <img src="images/screens/AllureReportSuites.png" alt="AllureReportSuites" width="1150">
+</p>
+
 Also available additional test artifacts as:
 - Screenshot
 - Page Source
@@ -265,11 +270,7 @@ Also available additional test artifacts as:
 - Browserstack full info link
 
 <p align="center">
-  <img src="images/screens/AllureReportSuites.png" alt="AllureReportSuites" width="1050">
-</p>
-
-<p align="center">
-  <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="650">
+  <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="750">
 </p>
 
 [Back to the table of contents ⬆](#TableOfContents)
@@ -279,8 +280,8 @@ Also available additional test artifacts as:
 ## Project in Allure TestOps
 All test-cases in the project are imported and constantly updated from the code,\
 so there is no need in complex process of synchronization manual test-cases and autotests.\
-It is enough to create and update autotest in the code and test-case in TMS always will be in actual state.\
-Although, manual test-cases can be added in TMS in case of need.
+It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.\
+Although, manual test-cases can be added in TMS in case of need(via web interface or via code).
 <p align="center">
   <img src="images/screens/AllureTestOpsTests.png" alt="AllureTestOpsTests" width="1050">
 </p>
@@ -288,21 +289,21 @@ Although, manual test-cases can be added in TMS in case of need.
 
 ## Ability to start a run of custom set of tests from Allure TestOps
 Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
-Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be seamlessly integrated into Allure TestOps.\
+Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be seamlessly integrated into Allure TestOps.
 <p align="center">
-  <img src="images/screens/AllureTestOpsSelectionOfTests.png" alt="AllureTestOpsSelectionOfTests" width="1050">
+  <img src="images/screens/AllureTestOpsSelectionOfTests.png" alt="AllureTestOpsSelectionOfTests" width="1150">
 </p>
 <p align="center">
   <img src="images/screens/AllureTestOpsSelectionOfEnvironment.png" alt="AllureTestOpsSelectionOfEnvironment" width="1050">
 </p>
 <p align="center">
-  <img src="images/screens/AllureTestOpsStartedRun.png" alt="AllureTestOpsStartedRun" width="1050">
+  <img src="images/screens/AllureTestOpsStartedRun.png" alt="AllureTestOpsStartedRun" width="1150">
 </p>
 
 As soon as the Jenkins job is done, corresponding tests get their statuses. A tester can finish manual tests(if any) and click "Close launch".
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsFinishedRunClickStop.png" alt="AllureTestOpsFinishedRunClickStop" width="1050">
+  <img src="images/screens/AllureTestOpsFinishedRunClickStop.png" alt="AllureTestOpsFinishedRunClickStop" width="1150">
 </p>
 
 > After that all these test-cases(names, steps, tags etc) will be updated according to the recent code changes.
