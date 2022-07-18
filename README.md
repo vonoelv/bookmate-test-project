@@ -291,19 +291,19 @@ Although, manual test-cases can be added in TMS in case of need(via web interfac
 Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
 Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be seamlessly integrated into Allure TestOps.
 <p align="center">
-  <img src="images/screens/AllureTestOpsSelectionOfTests.png" alt="AllureTestOpsSelectionOfTests" width="1150">
+  <img src="images/screens/AllureTestOpsSelectionOfTests.png" alt="AllureTestOpsSelectionOfTests" width="1250">
 </p>
 <p align="center">
   <img src="images/screens/AllureTestOpsSelectionOfEnvironment.png" alt="AllureTestOpsSelectionOfEnvironment" width="1050">
 </p>
 <p align="center">
-  <img src="images/screens/AllureTestOpsStartedRun.png" alt="AllureTestOpsStartedRun" width="1150">
+  <img src="images/screens/AllureTestOpsStartedRun.png" alt="AllureTestOpsStartedRun" width="1250">
 </p>
 
 As soon as the Jenkins job is done, corresponding tests get their statuses. A tester can finish manual tests(if any) and click "Close launch".
 
 <p align="center">
-  <img src="images/screens/AllureTestOpsFinishedRunClickStop.png" alt="AllureTestOpsFinishedRunClickStop" width="1150">
+  <img src="images/screens/AllureTestOpsFinishedRunClickStop.png" alt="AllureTestOpsFinishedRunClickStop" width="1250">
 </p>
 
 > After that all these test-cases(names, steps, tags etc) will be updated according to the recent code changes.
