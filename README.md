@@ -20,6 +20,7 @@
 + [Github webhooks](#GithubWebhooks)
 + [Tests](#Tests)
 + [Jira integration](#Jira)
++ [Video of running tests](#Video)
 
 
 # <a name="Description">Description</a>
@@ -368,5 +369,10 @@ This way we can find problem earlier and always have actual state of test-cases 
 
 # <a name="Tests">Tests</a>
 ## Checks
+
+[Back to the table of contents ⬆](#TableOfContents)
+
+
+# <a name="Video">Video of running tests</a>
 
 [Back to the table of contents ⬆](#TableOfContents)
