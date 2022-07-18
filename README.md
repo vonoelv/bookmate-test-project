@@ -1,6 +1,10 @@
 # Test automation project for service [Bookmate](https://bookmate.com/about)
-Bookmate is a subscription based e-book service.
+
 ![Bookmate_logo.png](images/icons/Bookmate_logo.png)
+
+> Bookmate is a subscription based e-book service providing access to books, comics, audiobooks,\
+> related social activity - reviews, comments, ratings, private and public bookshelfs.\
+> Consists of website and mobile applications for Android and iOS.
 
 ## <a name="TableOfContents">Table of contents</a>
 + [Description](#Description)
@@ -43,15 +47,15 @@ The test project consists of WebUI, API and mobile tests.
 </p>
 
 The autotests in this project are written in **Java** using **Selenide** framework.\
-**Gradle** is used as a build automation tool.  \
-**JUnit5** to execute tests.\
-**Jenkins** CI/CD for running tests remotely.\
-**Selenoid** to remote launching browsers in **Docker** containers.\
-**Browserstack** to run mobile tests.\
-**Android Studio tools**, **Appium** to tun mobile tests locally in a mobile device emulator.\
-**Allure Report** for test results visualisation.\
-**Telegram Bot** for test results notifications.\
-**Allure TestOps** as Tests Management System. 
+**Gradle** - is used as a build automation tool.  \
+**JUnit5** - to execute tests.\
+**Jenkins** - CI/CD for running tests remotely.\
+**Selenoid** - to remote launching browsers in **Docker** containers.\
+**Browserstack** - to run mobile tests.\
+**Android Studio tools**, **Appium** - to tun mobile tests locally in a mobile device emulator.\
+**Allure Report** - for test results visualisation.\
+**Telegram Bot** - for test results notifications.\
+**Allure TestOps** - as Tests Management System.
 
 [Back to the table of contents ⬆](#TableOfContents)
 
