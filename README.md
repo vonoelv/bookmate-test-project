@@ -6,7 +6,7 @@
 > related social activity - reviews, comments, ratings, private and public bookshelfs.\
 > Consists of website and mobile applications for Android and iOS.
 
-## <a name="TableOfContents">Table of contents</a>
+# <a name="TableOfContents">Table of contents</a>
 + [Description](#Description)
 + [Tools and technologies](#Technology)
 + [How to run](#Jenkins)
@@ -21,9 +21,19 @@
 <!-- + [Jira integration](#Jira) -->
 
 
-## <a name="Description">Description</a>
+# <a name="Description">Description</a>
 The test project consists of WebUI, API and mobile(android) tests.
-
+Brief list of interesting facts about the project:
+- [x] Page Object
+- [x] Parametrized build
+- [x] Different configuration files for test running depending on build parameters
+- [x] Config with Owner library
+- [x] Models for API tests using Lombok
+- [x] Custom Allure listener for beautiful API requests/responses logging
+- [x] Allure TestOps integration
+- [x] Autotests as test documentation
+- [x] Github webhooks on each push to trigger Jenkins build
+- [x] Jira integration
 
 
 # <a name="Technology">Tools and technologies</a>
@@ -123,7 +133,7 @@ platformVersion=
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-### <a name="PropertiesExamples">Examples of property files</a>
+## <a name="PropertiesExamples">Examples of property files</a>
 
 <details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
@@ -355,6 +365,5 @@ This way we can find problem earlier and always have actual state of test-cases 
 
 # Tests
 ## Checks
-## Test patterns and peculiarities
 
 [Back to the table of contents ⬆](#TableOfContents)
