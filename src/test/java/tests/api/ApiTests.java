@@ -21,7 +21,7 @@ class ApiTests {
     String NEW_BOOKSHELF_ANNOTATION = "Annotation for bookshelf99";
 
     @Test
-    @DisplayName("Ability to add a book to the library")
+    @DisplayName("Ability to add a book to the library1")
     void checkAddingBookToLibrary() {
         apiSteps.ensureBookIsNotInLibrary(book1Uuid);
         Book addedBook = apiSteps.addBookToLibrary(book1Uuid);
