@@ -271,7 +271,7 @@ Also additional test artifacts are available:
 >- Browserstack full info link
 
 <p align="center">
-  <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="750">
+  <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="950">
 </p>
 
 [Back to the table of contents ⬆](#TableOfContents)
