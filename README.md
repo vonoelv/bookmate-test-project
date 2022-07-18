@@ -46,16 +46,16 @@ The test project consists of WebUI, API and mobile(android) tests.
   <code><img width="5%" title="Appium" src="./images/icons/appium.svg"></code>
 </p>
 
-The autotests in this project are written in **Java** using **Selenide** framework.\
-**Gradle** - is used as a build automation tool.  \
-**JUnit5** - to execute tests.\
-**Jenkins** - CI/CD for running tests remotely.\
-**Selenoid** - to remote launching browsers in **Docker** containers.\
-**Browserstack** - to run mobile tests.\
-**Android Studio tools**, **Appium** - to tun mobile tests locally in a mobile device emulator.\
-**Allure Report** - for test results visualisation.\
-**Telegram Bot** - for test results notifications.\
-**Allure TestOps** - as Tests Management System.
+The autotests in this project are written in `Java` using `Selenide` framework.\
+`Gradle` - is used as a build automation tool.  \
+`JUnit5` - to execute tests.\
+`Jenkins` - CI/CD for running tests remotely.\
+`Selenoid` - to remote launching browsers in `Docker` containers.\
+`Browserstack` - to run mobile tests.\
+`Android Studio tools`, `Appium` - to tun mobile tests locally in a mobile device emulator.\
+`Allure Report` - for test results visualisation.\
+`Telegram Bot` - for test results notifications.\
+`Allure TestOps` - as Tests Management System.
 
 [Back to the table of contents ⬆](#TableOfContents)
 
@@ -67,19 +67,19 @@ gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 
 > Also "-Dthreads=<number_of_threads>" can be added for parallel tests execution.
 
-**tag** - defines a tag for running specific tests:
-- API
-- WebUI
-- Android
+`tag` - defines a tag for running specific tests:
+>- *API*
+>- *WebUI*
+>- *Android*
  
-**runIn** - defines an environment for running these tests:
-- \<not defined\>(for API tests)
-- browser_selenoid
-- browser_local
-- android_browserstack
-- android_emulator
-- android_real
-- android_selenoid
+`runIn` - defines an environment for running these tests:
+>- *\<not defined\>(for API tests)*
+>- *browser_selenoid*
+>- *browser_local*
+>- *android_browserstack*
+>- *android_emulator*
+>- *android_real*
+>- *android_selenoid*
 
 Additional properties are retrieved from the corresponding properties file:
 ```
@@ -221,12 +221,13 @@ A parametrized Jenkins job can be launched with needed ***tag*** and ***runIn***
 <img src="images/screens/JenkinsBuildParameters.png" alt="JenkinsBuildParameters" width="950">
 </p>
 
-project-{runIn}.properties files with potentially sensitive information are created in the build workspace on start build.\
+`project-{runIn}.properties` files with potentially sensitive information are created in the build workspace on start build.\
 As soon as the build is done the workspace is deleted.
 
 After the build is done the results are available in:
-- Allure Report
-- Allure TestOps - results are uploaded there and the automated test-cases can be automatically updated accordingly to the recent changes in the code.
+>- <code><strong>*Allure Report*</strong></code>
+>- <code><strong>*Allure TestOps*</strong></code> - results are uploaded there and the automated test-cases can be automatically updated accordingly to the recent changes in the code.
+
 <p  align="center">
 <img src="images/screens/JenkinsFinishedBuild.png" alt="JenkinsFinishedBuild" width="950">
 </p>
@@ -263,11 +264,11 @@ Full info about each test can be shown: tags, severity, duration, detailed steps
   <img src="images/screens/AllureReportSuites.png" alt="AllureReportSuites" width="1150">
 </p>
 
-Also available additional test artifacts as:
-- Screenshot
-- Page Source
-- Video
-- Browserstack full info link
+Also additional test artifacts are available:
+>- Screenshot
+>- Page Source
+>- Video
+>- Browserstack full info link
 
 <p align="center">
   <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="750">
