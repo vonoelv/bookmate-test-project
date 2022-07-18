@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <style>.a{fill:url(#a);}.b{fill:url(#b);}.c{fill:url(#c);}.d{fill:url(#d);}.e{fill:#fff;}</style>
+        <linearGradient id="a" x1="12.68" y1="286.43" x2="48.14" y2="286.43"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, 342)" gradientUnits="userSpaceOnUse">
+            <stop offset="0.26" stop-color="#f97a12"/>
+            <stop offset="0.46" stop-color="#b07b58"/>
+            <stop offset="0.72" stop-color="#577bae"/>
+            <stop offset="0.91" stop-color="#1e7ce5"/>
+            <stop offset="1" stop-color="#087cfa"/>
+        </linearGradient>
+        <linearGradient id="b" x1="39.91" y1="303.02" x2="98.46" y2="270.62"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, 342)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f97a12"/>
+            <stop offset="0.07" stop-color="#cb7a3e"/>
+            <stop offset="0.15" stop-color="#9e7b6a"/>
+            <stop offset="0.24" stop-color="#757b91"/>
+            <stop offset="0.33" stop-color="#537bb1"/>
+            <stop offset="0.43" stop-color="#387ccc"/>
+            <stop offset="0.54" stop-color="#237ce0"/>
+            <stop offset="0.66" stop-color="#147cef"/>
+            <stop offset="0.79" stop-color="#0b7cf7"/>
+            <stop offset="1" stop-color="#087cfa"/>
+        </linearGradient>
+        <linearGradient id="c" x1="80.81" y1="283.37" x2="64.51" y2="332.07"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, 342)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fe315d"/>
+            <stop offset="0.08" stop-color="#cb417e"/>
+            <stop offset="0.16" stop-color="#9e4e9b"/>
+            <stop offset="0.25" stop-color="#755bb4"/>
+            <stop offset="0.34" stop-color="#5365ca"/>
+            <stop offset="0.44" stop-color="#386ddb"/>
+            <stop offset="0.54" stop-color="#2374e9"/>
+            <stop offset="0.66" stop-color="#1478f3"/>
+            <stop offset="0.79" stop-color="#0b7bf8"/>
+            <stop offset="1" stop-color="#087cfa"/>
+        </linearGradient>
+        <linearGradient id="d" x1="23.47" y1="312.2" x2="72.36" y2="231.33"
+                        gradientTransform="matrix(1, 0, 0, -1, 0, 342)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fe315d"/>
+            <stop offset="0.04" stop-color="#f63462"/>
+            <stop offset="0.1" stop-color="#df3a71"/>
+            <stop offset="0.17" stop-color="#c24383"/>
+            <stop offset="0.29" stop-color="#ad4a91"/>
+            <stop offset="0.55" stop-color="#755bb4"/>
+            <stop offset="0.92" stop-color="#1d76ed"/>
+            <stop offset="1" stop-color="#087cfa"/>
+        </linearGradient>
+    </defs>
+    <title>Intelij_IDEA</title>
+    <polygon class="a" points="31.1 71.4 12.7 56.8 21.8 39.7 48.1 50 31.1 71.4"/>
+    <polygon class="b" points="88.2 32.2 86.8 76.4 57.4 88.2 39.7 76.8 65.6 50 54.3 25.2 64.4 13 88.2 32.2"/>
+    <polygon class="c" points="88.2 32.2 64.9 59.7 54.3 25.2 64.4 13 88.2 32.2"/>
+    <polygon class="d"
+             points="48.6 75.2 17.9 86.3 22.8 69.1 29.3 47.9 11.8 42 22.8 11.8 46.8 14.8 70.4 41.7 48.6 75.2"/>
+    <rect x="26.8" y="26.5" width="47.1" height="47.14"/>
+    <rect class="e" x="31.1" y="64.8" width="17.7" height="2.95"/>
+    <polygon class="e"
+             points="43.9 36.3 43.9 32.6 34.1 32.6 34.1 36.3 36.9 36.3 36.9 48.6 34.1 48.6 34.1 52.2 43.9 52.2 43.9 48.6 41.2 48.6 41.2 36.3 43.9 36.3"/>
+    <path class="e"
+          d="M53.3,52.5a6.9,6.9,0,0,1-3.8-.9,10.6,10.6,0,0,1-2.6-2l2.8-3.1a5,5,0,0,0,1.6,1.4,3.3,3.3,0,0,0,1.9.6,2.4,2.4,0,0,0,1.9-.8,3.4,3.4,0,0,0,.7-2.5V32.7h4.3V45.4a9.7,9.7,0,0,1-.4,3.1,7.4,7.4,0,0,1-1.4,2.2A6.7,6.7,0,0,1,56.1,52a8.2,8.2,0,0,1-2.8.5"/>
+</svg>

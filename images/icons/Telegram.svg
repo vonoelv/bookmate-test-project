@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <style>.a{fill:url(#a);}.b{fill:#c8daea;}.c{fill:#a9c9dd;}.d{fill:url(#b);}</style>
+        <linearGradient id="a" x1="-765.54" y1="328.95" x2="-765.62" y2="328.76"
+                        gradientTransform="matrix(240, 0, 0, -240, 183791, 78971)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#37aee2"/>
+            <stop offset="1" stop-color="#1e96c8"/>
+        </linearGradient>
+        <linearGradient id="b" x1="-763.08" y1="326.91" x2="-763.01" y2="326.79"
+                        gradientTransform="matrix(130.49, 0, 0, -109.45, 99628.81, 35831.08)"
+                        gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#eff7fc"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+    </defs>
+    <title>Telegram</title>
+    <circle class="a" cx="50" cy="50" r="40.5"/>
+    <path class="b" d="M42.6,68.5c-1.3,0-1.1-.4-1.6-1.7L37.2,54.1,66.9,36.5"/>
+    <path class="c" d="M42.6,68.5a2.5,2.5,0,0,0,2-1L50,62.3l-6.7-4.1"/>
+    <path class="d"
+          d="M43.3,58.2,59.6,70.3c1.8,1,3.2.5,3.6-1.7l6.7-31.3c.7-2.8-1.1-4-2.8-3.2l-39,15c-2.7,1.1-2.7,2.6-.5,3.3l10,3.1L60.8,40.9c1.1-.7,2.1-.3,1.2.4"/>
+</svg>
