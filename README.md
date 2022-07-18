@@ -49,6 +49,7 @@ The test project consists of WebUI, API and mobile(android) tests.
 The autotests in this project are written in `Java` using `Selenide` framework.\
 `Gradle` - is used as a build automation tool.  \
 `JUnit5` - to execute tests.\
+`REST Assured` - for easy API testing of REST services.\
 `Jenkins` - CI/CD for running tests remotely.\
 `Selenoid` - to remote launching browsers in `Docker` containers.\
 `Browserstack` - to run mobile tests.\
@@ -81,7 +82,7 @@ gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 >- *android_real*
 >- *android_selenoid*
 
-Additional properties are retrieved from the corresponding properties file:
+Additional properties are retrieved from the corresponding properties file(depending on `runIn` value):
 ```
 ./resources/config/project-${runIn}.properties
 ```
@@ -103,7 +104,7 @@ D --> J[android_selenoid]
 [Back to the table of contents ⬆](#TableOfContents)
 
 # <a name="PropertyFiles">Property files</a>
-Structure of ***project-${runIn}.properties*** file:
+Structure of `project-${runIn}.properties` file:
 ```
 remoteDriver=
 browser=
@@ -315,6 +316,8 @@ Automation trends charts, distribution tests by some different parameters etc:
   <img src="images/AllureTestOpsDashboards.png" alt="AllureTestOpsDashboards" width="650">
 </p>
 
+[Back to the table of contents ⬆](#TableOfContents)
+
 ## Defects
 
 [Back to the table of contents ⬆](#TableOfContents)
@@ -332,14 +335,11 @@ gradle clean test -Dtag=Android -DrunIn=android_browserstack
 ```
 This way we can find problem earlier and always have actual state of test-cases in Allure TestOps.
 <p align="center">
-  <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="950">
-</p>
-<p align="center">
-  <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="650">
+  <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="1050">
 </p>
 
 <p align="center">
-  <img src="images/screens/JenkinsRemoteBuildTrigerring.png" alt="JenkinsRemoteBuildTrigerring" width="650">
+  <img src="images/screens/JenkinsRemoteBuildTrigerring.png" alt="JenkinsRemoteBuildTrigerring" width="1050">
 </p>
 
 
