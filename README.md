@@ -270,7 +270,7 @@ Also additional test artifacts are available:
 >- Video
 >- Browserstack full info link
 
-<p align="center">
+<p align="left">
   <img src="images/screens/AllureReportSuites2.png" alt="AllureReportSuites2" width="950">
 </p>
 
@@ -320,6 +320,28 @@ Automation trends charts, distribution tests by some different parameters etc:
 [Back to the table of contents ⬆](#TableOfContents)
 
 # Github webhooks
+Each push to the repository triggers 3 builds in Jenkins:
+```bash
+gradle clean test -Dtag=API
+```
+```bash
+gradle clean test -Dtag=WebUI -DrunIn=browser_selenoid
+```
+```bash
+gradle clean test -Dtag=Android -DrunIn=android_browserstack
+```
+This way we can find problem earlier and always have actual state of test-cases in Allure TestOps.
+<p align="center">
+  <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="950">
+</p>
+<p align="center">
+  <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="650">
+</p>
+
+<p align="center">
+  <img src="images/screens/JenkinsRemoteBuildTrigerring.png" alt="JenkinsRemoteBuildTrigerring" width="650">
+</p>
+
 
 [Back to the table of contents ⬆](#TableOfContents)
 
