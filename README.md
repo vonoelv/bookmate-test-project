@@ -14,11 +14,12 @@
     + [Property files](#PropertyFiles)
       + [Examples of property files](#PropertiesExamples)
     + [Running tests in Jenkins](#RunInJenkins)
-    + [Notifications in Telegram about results](#TelegramNotifications)
++ [Notifications in Telegram about results](#TelegramNotifications)
 + [Test results report in Allure Report](#AllureReport)
 + [Allure TestOps integration](#AllureTestOps)
-+ [Results](#Results)
-<!-- + [Jira integration](#Jira) -->
++ [Github webhooks](#GithubWebhooks)
++ [Tests](#Tests)
++ [Jira integration](#Jira)
 
 
 # <a name="Description">Description</a>
@@ -254,7 +255,7 @@ Telegram bot sends a brief report to a specified telegram chat by results of eac
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="AllureReport">Allure Report[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
+# <a name="AllureReport">Test results report in Allure Report[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
 
 ## Main page
 Main page of Allure report contains the following blocks:
@@ -334,7 +335,8 @@ Automation trends charts, distribution tests by some different parameters etc:
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# Github webhooks
+
+# <a name="GithubWebhooks">Github webhooks</a>
 Each push to the repository triggers 3 builds in Jenkins:
 ```bash
 gradle clean test -Dtag=API
@@ -357,13 +359,14 @@ This way we can find problem earlier and always have actual state of test-cases 
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# Jira integration
+
+# <a name="JiraIntegration">Jira integration</a>
 ## Jira tickets for defects
 
 [Back to the table of contents ⬆](#TableOfContents)
 
 
-# Tests
+# <a name="Tests">Tests</a>
 ## Checks
 
 [Back to the table of contents ⬆](#TableOfContents)
