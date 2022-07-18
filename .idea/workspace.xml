@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="updated readme 7">
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookmate-test-project" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BWTdZoH8fZ0A8R9rtJW0rT241c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/bookmate-test-project/images/screens&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;,
+      &quot;TEXT&quot;,
+      &quot;JSON&quot;,
+      &quot;Shell Script&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tests.api.models.bookshelfs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\bookmate-test-project\images\screens" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\resources" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\resources\config" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\java\drivers" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\java\helpers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\bookmate-test-project\images\icons" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="drivers" />
+      <recent name="helpers" />
+      <recent name="tests.api.models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Android-selenoid">
+    <configuration name="API" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=API" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Android-browserstack" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_browserstack" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Android-emulator" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_emulator" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Android-real" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_real" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Android-selenoid" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_selenoid" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebUI-local" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_local" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebUI-selenoid" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.API" />
+      <item itemvalue="Gradle.WebUI-local" />
+      <item itemvalue="Gradle.WebUI-selenoid" />
+      <item itemvalue="Gradle.Android-browserstack" />
+      <item itemvalue="Gradle.Android-emulator" />
+      <item itemvalue="Gradle.Android-real" />
+      <item itemvalue="Gradle.Android-selenoid" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="" />
+      <created>1657020930182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657020930182</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1657742700681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657742700681</updated>
+    </task>
+    <task id="LOCAL-00002" summary="removed switching to lower case">
+      <created>1657742871926</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657742871926</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removed Location class">
+      <created>1657743064494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743064494</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added android real config">
+      <created>1657793284486</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657793284486</updated>
+    </task>
+    <task id="LOCAL-00005" summary="extracted CDP-related actions to Cdt helper class and removed auto-switching to English site version">
+      <created>1657795501924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657795501924</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added missed android real config">
+      <created>1657795722460</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657795722460</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed WebUiDriver, fixed support browser options">
+      <created>1657895497685</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657895497685</updated>
+    </task>
+    <task id="LOCAL-00008" summary="removed Cdp helper as not used">
+      <created>1657896446292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657896446292</updated>
+    </task>
+    <task id="LOCAL-00009" summary="some cleaning">
+      <created>1657897053122</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657897053122</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added bookmate icon">
+      <created>1657900261579</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657900261579</updated>
+    </task>
+    <task id="LOCAL-00011" summary="config refactoring- tools renamed to runIn and extracted to cmd argument, added browserstack link">
+      <created>1658006653637</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658006653637</updated>
+    </task>
+    <task id="LOCAL-00012" summary="configs fix">
+      <created>1658008512474</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658008512474</updated>
+    </task>
+    <task id="LOCAL-00013" summary="defined some test tags">
+      <created>1658060981362</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658060981362</updated>
+    </task>
+    <task id="LOCAL-00014" summary="temporary test name update">
+      <created>1658062286121</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658062286121</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added some tags">
+      <created>1658062862624</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658062862624</updated>
+    </task>
+    <task id="LOCAL-00016" summary="reworked and added some tags">
+      <created>1658064476028</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658064476028</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added some steps descriptions">
+      <created>1658090400121</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658090400121</updated>
+    </task>
+    <task id="LOCAL-00018" summary="tag is not mandatory now">
+      <created>1658096354632</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658096354632</updated>
+    </task>
+    <task id="LOCAL-00019" summary="tag is not mandatory now 2">
+      <created>1658096468876</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1658096468876</updated>
+    </task>
+    <task id="LOCAL-00020" summary="moved Library opening to beforEach">
+      <created>1658098540484</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658098540484</updated>
+    </task>
+    <task id="LOCAL-00021" summary="removed allure-assertJ, added some DisplayNames">
+      <created>1658100026131</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1658100026131</updated>
+    </task>
+    <task id="LOCAL-00022" summary="DisplayNames to Steps">
+      <created>1658101044859</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1658101044859</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test webhooks 1">
+      <created>1658138209473</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1658138209473</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test webhooks 2">
+      <created>1658138693143</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1658138693143</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test webhooks 3">
+      <created>1658138827062</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658138827062</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added draft of readme">
+      <created>1658174051620</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1658174051620</updated>
+    </task>
+    <task id="LOCAL-00027" summary="updated readme">
+      <created>1658174981432</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1658174981432</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updated readme 2">
+      <created>1658178658051</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658178658051</updated>
+    </task>
+    <task id="LOCAL-00029" summary="updated readme 3">
+      <created>1658179342803</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1658179342803</updated>
+    </task>
+    <task id="LOCAL-00030" summary="updated readme 4">
+      <created>1658179440559</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1658179440559</updated>
+    </task>
+    <task id="LOCAL-00031" summary="updated readme 5">
+      <created>1658179729292</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1658179729292</updated>
+    </task>
+    <task id="LOCAL-00032" summary="updated readme 6">
+      <created>1658180001898</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1658180001898</updated>
+    </task>
+    <task id="LOCAL-00033" summary="updated readme 7">
+      <created>1658180999429</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1658180999429</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some cleaning" />
+    <MESSAGE value="added bookmate icon" />
+    <MESSAGE value="config refactoring- tools renamed to runIn and extracted to cmd argument, added browserstack link" />
+    <MESSAGE value="configs fix" />
+    <MESSAGE value="defined some test tags" />
+    <MESSAGE value="temporary test name update" />
+    <MESSAGE value="added some tags" />
+    <MESSAGE value="reworked and added some tags" />
+    <MESSAGE value="added some steps descriptions" />
+    <MESSAGE value="tag is not mandatory now" />
+    <MESSAGE value="tag is not mandatory now 2" />
+    <MESSAGE value="moved Library opening to beforEach" />
+    <MESSAGE value="removed allure-assertJ, added some DisplayNames" />
+    <MESSAGE value="DisplayNames to Steps" />
+    <MESSAGE value="test webhooks 1" />
+    <MESSAGE value="test webhooks 2" />
+    <MESSAGE value="test webhooks 3" />
+    <MESSAGE value="added draft of readme" />
+    <MESSAGE value="updated readme" />
+    <MESSAGE value="updated readme 2" />
+    <MESSAGE value="updated readme 3" />
+    <MESSAGE value="updated readme 4" />
+    <MESSAGE value="updated readme 5" />
+    <MESSAGE value="updated readme 6" />
+    <MESSAGE value="updated readme 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme 7" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
