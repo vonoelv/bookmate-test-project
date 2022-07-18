@@ -283,7 +283,7 @@ Also additional test artifacts are available:
 All test-cases in the project are imported and constantly updated from the code,\
 so there is no need in complex process of synchronization manual test-cases and autotests.\
 It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.\
-Although, manual test-cases can be added in TMS in case of need(via web interface or via code).
+Manual test-cases also can be added in TMS in case of need(via web interface or via code).
 <p align="center">
   <img src="images/screens/AllureTestOpsTests.png" alt="AllureTestOpsTests" width="1050">
 </p>
