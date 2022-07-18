@@ -277,7 +277,7 @@ Also additional test artifacts are available:
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="AllureTestOps">Allure TestOps[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
+# <a name="AllureTestOps">Allure TestOps integration[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
 
 ## Project in Allure TestOps
 All test-cases in the project are imported and constantly updated from the code,\
@@ -309,6 +309,8 @@ As soon as the Jenkins job is done, corresponding tests get their statuses. A te
 </p>
 
 > After that all these test-cases(names, steps, tags etc) will be updated according to the recent code changes.
+
+[Back to the table of contents ⬆](#TableOfContents)
 
 ## Dashboards
 Automation trends charts, distribution tests by some different parameters etc:
@@ -347,5 +349,12 @@ This way we can find problem earlier and always have actual state of test-cases 
 
 # Jira integration
 ## Jira tickets for defects
+
+[Back to the table of contents ⬆](#TableOfContents)
+
+
+# Tests
+## Checks
+## Test patterns and peculiarities
 
 [Back to the table of contents ⬆](#TableOfContents)
