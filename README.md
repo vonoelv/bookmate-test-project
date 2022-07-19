@@ -40,7 +40,7 @@ A brief list of interesting facts about the project:
 - [x] Jira integration
 - [x] Parallel execution
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./resources/config/project-android_browserstack.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_browserstack.properties) -->
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 
