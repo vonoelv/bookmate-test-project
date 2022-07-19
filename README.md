@@ -181,12 +181,14 @@ platformVersion=
 <details>
     <summary><h4>project-android_browserstack.properties</h4></summary>
 
+        ```properties
         remoteDriver=
         browser=
         user=${browserstack_user_sys_prop}
         key=${browserstack_key_sys_prop}
         deviceName=Samsung Galaxy S22 Ultra
         platformVersion=12.0
+        ```
 
 </details>
 
