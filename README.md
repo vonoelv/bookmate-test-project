@@ -282,10 +282,10 @@ A parametrized Jenkins job can be launched with needed ***tag*** and ***runIn***
 </p>
 
 `project-{runIn}.properties` config files are created in the build workspace on start build.\
-As soon as the build is done the workspace is deleted.\
+As soon as the build is done the workspace is deleted.
 
 Sensitive information(login names and passwords) is stored in an encrypted form in Jenkins credential storage.\
-And relatively safe transferred to the build by gradle arguments(see [Gradle command](#GradleCommand) section, 'Additional parameters') and it's values masked in the logs.\
+And relatively safe transferred to the build by gradle arguments(see [Gradle command](#GradleCommand) section, 'Additional parameters') and it's values masked in the logs.
 
 After the build is done the test results are available in:
 >- <code><strong>*Allure Report*</strong></code>
@@ -458,6 +458,8 @@ https://user-images.githubusercontent.com/103368614/179863691-82742593-e256-4bed
 
 
 https://user-images.githubusercontent.com/103368614/179863761-a42a6c4f-b7ff-48eb-b35e-e454baabb0f4.mp4
+
+
 
 
 
