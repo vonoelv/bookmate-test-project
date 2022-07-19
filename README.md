@@ -38,6 +38,7 @@ A brief list of interesting facts about the project:
 - [x] Autotests as test documentation
 - [x] Github webhooks on each push to trigger Jenkins build
 - [x] Jira integration
+- [x] Parallel execution
 
 
 # <a name="Technology">Tools and technologies</a>
@@ -79,8 +80,10 @@ To run locally and in Jenkins the following command is used:
 ```bash
 gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 ```
-
-> Also "-Dthreads=<number_of_threads>" can be added for parallel tests execution.
+Additional parameters:
+> `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - credentials for selenoid\
+> `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
+> `-Dthreads=number_of_threads` can be added for parallel tests execution.
 
 `tag` - defines a tag for running specific tests:
 >- *API*
