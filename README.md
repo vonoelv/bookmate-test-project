@@ -40,18 +40,6 @@ A brief list of interesting facts about the project:
 - [x] Jira integration
 - [x] Parallel execution
 
-<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_browserstack.properties) -->
-<!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_browserstack.properties -->
-```properties
-remoteDriver=
-browser=
-user=${browserstack_user_sys_prop}
-key=${browserstack_key_sys_prop}
-deviceName=Samsung Galaxy S22 Ultra
-platformVersion=12.0
-```
-<!-- MARKDOWN-AUTO-DOCS:END -->
-
 
 # <a name="Technology">Tools and technologies</a>
 <p  align="center">
@@ -181,14 +169,8 @@ platformVersion=
 <details>
     <summary><h4>project-android_browserstack.properties</h4></summary>
 
-        ```properties
-        remoteDriver=
-        browser=
-        user=${browserstack_user_sys_prop}
-        key=${browserstack_key_sys_prop}
-        deviceName=Samsung Galaxy S22 Ultra
-        platformVersion=12.0
-        ```
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_browserstack.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
