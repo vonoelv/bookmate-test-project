@@ -141,6 +141,7 @@ platformVersion=
 [Back to the table of contents ⬆](#TableOfContents)
 
 ## <a name="PropertyFilesDefaults">Default property files</a>
+> The section below is automatically updated from content of src/test/resources/config/ directory. 
 
 <details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
