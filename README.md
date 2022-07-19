@@ -146,6 +146,15 @@ platformVersion=
     <summary><h4>project-browser_selenoid.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_selenoid.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-browser_selenoid.properties -->
+```properties
+remoteDriver=https://selenoid.autotests.cloud/wd/hub
+browser=chrome
+user=${selenoid_user_sys_prop}
+key=${selenoid_key_sys_prop}
+deviceName=
+platformVersion=
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
@@ -154,6 +163,15 @@ platformVersion=
     <summary><h4>project-browser_local.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_local.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-browser_local.properties -->
+```properties
+remoteDriver=
+browser=chrome
+user=
+key=
+deviceName=
+platformVersion=
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
@@ -162,6 +180,15 @@ platformVersion=
     <summary><h4>project-android_browserstack.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_browserstack.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_browserstack.properties -->
+```properties
+remoteDriver=
+browser=
+user=${browserstack_user_sys_prop}
+key=${browserstack_key_sys_prop}
+deviceName=Samsung Galaxy S22 Ultra
+platformVersion=12.0
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
@@ -170,6 +197,15 @@ platformVersion=
     <summary><h4>project-android_emulator.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_emulator.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_emulator.properties -->
+```properties
+remoteDriver=http://localhost:4723/wd/hub
+browser=
+user=
+key=
+deviceName=Pixel_4_API_30
+platformVersion=11.0
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
@@ -178,6 +214,15 @@ platformVersion=
     <summary><h4>project-android_real.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_real.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_real.properties -->
+```properties
+remoteDriver=http://localhost:4723/wd/hub
+browser=
+user=
+key=
+deviceName=5200aecd4956a489
+platformVersion=8.0
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
@@ -186,6 +231,15 @@ platformVersion=
     <summary><h4>project-android_selenoid.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_selenoid.properties) -->
+<!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_selenoid.properties -->
+```properties
+remoteDriver=https://selenoid.autotests.cloud/wd/hub
+browser=
+user=${selenoid_user_sys_prop}
+key=${selenoid_key_sys_prop}
+deviceName=android
+platformVersion=8.1
+```
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
