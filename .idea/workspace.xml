@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="updated readme">
+    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/ProjectConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" afterDir="false" />
@@ -139,7 +137,7 @@
       <recent name="tests.api.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Android-browserstack">
+  <component name="RunManager" selected="Gradle.Android-selenoid">
     <configuration name="API" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,7 +166,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_browserstack -DBROWSERSTACK_USER_SYSTEM_PROPERTY=enter_user -DBROWSERSTACK_KEY_SYSTEM_PROPERTY=enter_key" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_browserstack -Dbrowserstack_user_sys_prop=enter_user -Dbrowserstack_key_sys_prop=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -237,7 +235,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_selenoid -DSELENOID_USER_SYSTEM_PROPERTY=enter_user -DSELENOID_KEY_SYSTEM_PROPERTY=enter_key" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_selenoid -Dselenoid_user_sys_prop=enter_user -Dselenoid_key_sys_prop=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -283,7 +281,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid -DSELENOID_USER_SYSTEM_PROPERTY=enter_user -DSELENOID_KEY_SYSTEM_PROPERTY=enter_key" />
+        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid -Dselenoid_user_sys_prop=enter_user -Dselenoid_key_sys_prop=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -624,7 +622,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658226675556</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="extracted users/keys from files to system properties">
+      <created>1658236313108</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1658236313108</updated>
+    </task>
+    <task id="LOCAL-00045" summary="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
+      <created>1658238783688</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1658238783688</updated>
+    </task>
+    <task id="LOCAL-00046" summary="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
+      <created>1658238850394</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1658238850394</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,8 +658,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="config refactoring- tools renamed to runIn and extracted to cmd argument, added browserstack link" />
-    <MESSAGE value="configs fix" />
     <MESSAGE value="defined some test tags" />
     <MESSAGE value="temporary test name update" />
     <MESSAGE value="added some tags" />
@@ -664,7 +681,9 @@
     <MESSAGE value="updated readme 8" />
     <MESSAGE value="added idea workspace to share run configurations" />
     <MESSAGE value="updated readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
+    <MESSAGE value="extracted users/keys from files to system properties" />
+    <MESSAGE value="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid" />
+    <option name="LAST_COMMIT_MESSAGE" value="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
