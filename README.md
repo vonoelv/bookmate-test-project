@@ -363,7 +363,7 @@ gradle clean test -Dtag=WebUI -DrunIn=browser_selenoid
 ```bash
 gradle clean test -Dtag=Android -DrunIn=android_browserstack
 ```
-This way we can find problem earlier and always have actual state of test-cases in Allure TestOps.
+This way we can find problems earlier and always have actual state of test-cases in Allure TestOps.
 <p align="center">
   <img src="images/screens/GithubWebhooks1.png" alt="GithubWebhooks" width="1050">
 </p>
