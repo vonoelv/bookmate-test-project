@@ -1,9 +1,9 @@
 name: Autodocs
-on: [push]
+on: [ push ]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Markdown autodocs
-      - uses: dineshsonachalam/markdown-autodocs@v1.0.4
+        uses: dineshsonachalam/markdown-autodocs@v1.0.4
