@@ -6,7 +6,6 @@ import static org.aeonbits.owner.Config.Sources;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Sources({"system:properties",
-        "classpath:config/project.properties",
         "classpath:config/project-${runIn}.properties"
 })
 public interface ProjectConfig extends Config {

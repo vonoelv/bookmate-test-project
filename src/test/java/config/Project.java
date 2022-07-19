@@ -6,9 +6,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Project {
 
-    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
+    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class);
 
     static {
+        System.out.println(System.getProperties());
         String errorMessage = "'%s' value is null or empty";
         assertThat(config.runIn()).withFailMessage(errorMessage, "tool").isNotEmpty();
         switch (config.runIn()) {

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="updated readme 7">
+    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="updated readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/config/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/ProjectConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" afterDir="false" />
@@ -136,7 +139,7 @@
       <recent name="tests.api.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Android-selenoid">
+  <component name="RunManager" selected="Gradle.Android-browserstack">
     <configuration name="API" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -165,7 +168,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_browserstack" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_browserstack -DBROWSERSTACK_USER_SYSTEM_PROPERTY=enter_user -DBROWSERSTACK_KEY_SYSTEM_PROPERTY=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -234,7 +237,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_selenoid" />
+        <option name="scriptParameters" value="-Dtag=Android -DrunIn=android_selenoid -DSELENOID_USER_SYSTEM_PROPERTY=enter_user -DSELENOID_KEY_SYSTEM_PROPERTY=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -280,7 +283,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid" />
+        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid -DSELENOID_USER_SYSTEM_PROPERTY=enter_user -DSELENOID_KEY_SYSTEM_PROPERTY=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -551,7 +554,77 @@
       <option name="project" value="LOCAL" />
       <updated>1658180999429</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="updated readme 8">
+      <created>1658181226294</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1658181226294</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added idea workspace to share run configurations">
+      <created>1658181375698</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1658181375699</updated>
+    </task>
+    <task id="LOCAL-00036" summary="updated readme">
+      <created>1658182552256</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1658182552256</updated>
+    </task>
+    <task id="LOCAL-00037" summary="updated readme">
+      <created>1658183501689</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1658183501689</updated>
+    </task>
+    <task id="LOCAL-00038" summary="updated readme">
+      <created>1658183776010</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1658183776010</updated>
+    </task>
+    <task id="LOCAL-00039" summary="updated readme">
+      <created>1658183956202</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1658183956202</updated>
+    </task>
+    <task id="LOCAL-00040" summary="updated readme">
+      <created>1658185344131</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1658185344131</updated>
+    </task>
+    <task id="LOCAL-00041" summary="updated readme">
+      <created>1658185788973</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1658185788973</updated>
+    </task>
+    <task id="LOCAL-00042" summary="updated readme">
+      <created>1658186072324</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1658186072324</updated>
+    </task>
+    <task id="LOCAL-00043" summary="updated readme">
+      <created>1658226675556</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1658226675556</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -566,8 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some cleaning" />
-    <MESSAGE value="added bookmate icon" />
     <MESSAGE value="config refactoring- tools renamed to runIn and extracted to cmd argument, added browserstack link" />
     <MESSAGE value="configs fix" />
     <MESSAGE value="defined some test tags" />
@@ -584,14 +655,16 @@
     <MESSAGE value="test webhooks 2" />
     <MESSAGE value="test webhooks 3" />
     <MESSAGE value="added draft of readme" />
-    <MESSAGE value="updated readme" />
     <MESSAGE value="updated readme 2" />
     <MESSAGE value="updated readme 3" />
     <MESSAGE value="updated readme 4" />
     <MESSAGE value="updated readme 5" />
     <MESSAGE value="updated readme 6" />
     <MESSAGE value="updated readme 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme 7" />
+    <MESSAGE value="updated readme 8" />
+    <MESSAGE value="added idea workspace to share run configurations" />
+    <MESSAGE value="updated readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
