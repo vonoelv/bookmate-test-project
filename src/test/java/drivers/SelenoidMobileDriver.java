@@ -25,8 +25,8 @@ public class SelenoidMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
-        options.setDeviceName("android");
-        options.setPlatformName("8.1");
+        options.setDeviceName(config.deviceName());
+        options.setPlatformVersion(config.platformVersion());
         options.setCapability("enableVNC", true);
         options.setCapability("enableVideo", false);
         options.setApp(getApkUrl());

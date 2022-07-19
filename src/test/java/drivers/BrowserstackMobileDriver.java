@@ -33,8 +33,8 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.user", config.user());
         mutableCapabilities.setCapability("browserstack.key", config.key());
         mutableCapabilities.setCapability("app", UPLOADED_APK_URL);
-        mutableCapabilities.setCapability("device", "Samsung Galaxy S22 Ultra");
-        mutableCapabilities.setCapability("os_version", "12.0");
+        mutableCapabilities.setCapability("device", config.deviceName());
+        mutableCapabilities.setCapability("os_version", config.platformVersion());
         mutableCapabilities.setCapability("project", "Bookmate");
         mutableCapabilities.setCapability("build", "browserstack-build-1");
         mutableCapabilities.setCapability("name", "bookmate_test");
