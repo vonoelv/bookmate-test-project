@@ -17,6 +17,10 @@
 + [Notifications in Telegram about results](#TelegramNotifications)
 + [Test results report in Allure Report](#AllureReport)
 + [Allure TestOps integration](#AllureTestOps)
+    + [Project in Allure TestOps](#AllureTestOpsProject)
+    + [Start a run of custom set of tests](#AllureTestOpsStartTests)
+    + [Dashboards](#Dashboards)
+    + [Defects](#Defects)
 + [Github webhooks](#GithubWebhooks)
 + [Tests](#Tests)
 + [Jira integration](#Jira)
@@ -266,7 +270,7 @@ For convenience of running tests, IDEA run configurations are committed to this 
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="RunInJenkins">Running tests in [Jenkins](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
+# <a name="RunInJenkins">Running tests in [Jenkins](https://jenkins.autotests.cloud/job/C12-vyach_son-bookmate_test/)</a>
 Main page of the build:
 <p  align="center">
 <img src="images/screens/JenkinsBuildMainPage.png" alt="JenkinsBuildMainPage" width="950">
@@ -299,7 +303,7 @@ Telegram bot sends a brief report to a specified telegram chat by results of eac
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="AllureReport">Test results report in Allure Report[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
+# <a name="AllureReport">Test results report in [Allure Report](https://jenkins.autotests.cloud/job/C12-vyach_son-bookmate_test/47/allure/)</a>
 
 ## Main page
 Main page of Allure report contains the following blocks:
@@ -332,9 +336,10 @@ Also additional test artifacts are available:
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="AllureTestOps">Allure TestOps integration[](https://jenkins.autotests.cloud/job/12_vyach_son/xxxx)</a>
+# <a name="AllureTestOps">Allure TestOps integration[](https://allure.autotests.cloud/project/1466/test-cases?treeId=2804)</a>
+> The link can be accessed only by authorized users.
 
-## Project in Allure TestOps
+## <a name="AllureTestOpsProject">Project in Allure TestOps</a>
 All test-cases in the project are imported and constantly updated from the code,\
 so there is no need in complex process of synchronization manual test-cases and autotests.\
 It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.\
@@ -344,7 +349,7 @@ Manual test-cases also can be added in TMS in case of need(via web interface or 
 </p>
 ///ADD SCHEME of test cases creation/updating
 
-## Ability to start a run of custom set of tests from Allure TestOps
+## <a name="AllureTestOpsStartTests">Ability to start a run of custom set of tests from Allure TestOps</a>
 Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
 Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be seamlessly integrated into Allure TestOps.
 <p align="center">
@@ -361,7 +366,7 @@ As soon as the Jenkins job is done, corresponding tests get their statuses. A te
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-## Dashboards
+## <a name="Dashboards">Dashboards</a>
 Automation trends charts, distribution tests by some different parameters etc:
 <p align="center">
   <img src="images/screens/AllureTestOpsDashboardsOverview.png" alt="AllureTestOpsDashboardsOverview" width="1050">
@@ -381,7 +386,7 @@ Automation trends charts, distribution tests by some different parameters etc:
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-## Defects
+## <a name="Defects">Defects</a>
 Knows defects are automatically recognized by defined patterns for test fails in further launches.
 <p align="center">
   <img src="images/screens/AllureTestOpsDefects.png" alt="AllureTestOpsDefects" width="1050">
