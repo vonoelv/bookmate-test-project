@@ -1,0 +1,8 @@
+name: Autodocs
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Markdown autodocs
+      - uses: dineshsonachalam/markdown-autodocs@v1.0.4
