@@ -326,12 +326,28 @@ As soon as the Jenkins job is done, corresponding tests get their statuses. A te
 ## Dashboards
 Automation trends charts, distribution tests by some different parameters etc:
 <p align="center">
-  <img src="images/AllureTestOpsDashboards.png" alt="AllureTestOpsDashboards" width="650">
+  <img src="images/screens/AllureTestOpsDashboardsOverview.png" alt="AllureTestOpsDashboardsOverview" width="1050">
+</p>
+
+<p align="center">
+  <img src="images/screens/AllureTestOpsDashboardsAutomation.png" alt="AllureTestOpsDashboardsAutomation" width="1050">
+</p>
+
+<p align="center">
+  <img src="images/screens/AllureTestOpsDashboardsMembers.png" alt="AllureTestOpsDashboardsMembers" width="1050">
+</p>
+
+<p align="center">
+  <img src="images/screens/AllureTestOpsDashboardsAdditional.png" alt="AllureTestOpsDashboardsAdditional" width="1050">
 </p>
 
 [Back to the table of contents ⬆](#TableOfContents)
 
 ## Defects
+Knows defects are automatically recognized by defined patterns for test fails in further launches.
+<p align="center">
+  <img src="images/screens/AllureTestOpsDefects.png" alt="AllureTestOpsDefects" width="1050">
+</p>
 
 [Back to the table of contents ⬆](#TableOfContents)
 
