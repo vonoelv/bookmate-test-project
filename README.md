@@ -231,7 +231,7 @@ Main page of the build:
 
 A parametrized Jenkins job can be launched with needed ***tag*** and ***runIn***:
 <p  align="center">
-<img src="images/screens/JenkinsBuildParameters.png" alt="JenkinsBuildParameters" width="950">
+<img src="images/screens/JenkinsBuildParameters.gif" alt="JenkinsBuildParameters" width="950">
 </p>
 
 `project-{runIn}.properties` files with potentially sensitive information are created in the build workspace on start build.\
@@ -305,13 +305,7 @@ Manual test-cases also can be added in TMS in case of need(via web interface or 
 Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
 Allure TestOps run will be created, Jenkins job triggered with correct parameters. And results of the job will be seamlessly integrated into Allure TestOps.
 <p align="center">
-  <img src="images/screens/AllureTestOpsSelectionOfTests.png" alt="AllureTestOpsSelectionOfTests" width="1250">
-</p>
-<p align="center">
-  <img src="images/screens/AllureTestOpsSelectionOfEnvironment.png" alt="AllureTestOpsSelectionOfEnvironment" width="1050">
-</p>
-<p align="center">
-  <img src="images/screens/AllureTestOpsStartedRun.png" alt="AllureTestOpsStartedRun" width="1250">
+  <img src="images/screens/AllureTestOpsSelectionOfTests.gif" alt="AllureTestOpsSelectionOfTests" width="1250">
 </p>
 
 As soon as the Jenkins job is done, corresponding tests get their statuses. A tester can finish manual tests(if any) and click "Close launch".
