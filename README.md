@@ -437,7 +437,9 @@ This way we can find problems earlier and always have actual state of test-cases
 
 
 # <a name="JiraIntegration">Jira integration</a>
-## Jira tickets for defects
+<p align="center">
+  <img src="images/screens/JiraIntegration.png" alt="JiraIntegration" width="1050">
+</p>
 
 [Back to the table of contents ⬆](#TableOfContents)
 
