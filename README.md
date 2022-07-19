@@ -144,6 +144,9 @@ platformVersion=
 > The section below is automatically updated from content of src/test/resources/config/ directory. 
 
 <details>
+    <summary><h4>WebUI</h4></summary>
+
+<details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
 
 <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_selenoid.properties) -->
@@ -176,6 +179,12 @@ platformVersion=
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
+
+</details>
+
+
+<details>
+    <summary><h4>Android</h4></summary>
 
 <details>
     <summary><h4>project-android_browserstack.properties</h4></summary>
@@ -242,6 +251,8 @@ deviceName=android
 platformVersion=8.1
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+</details>
 
 </details>
 
