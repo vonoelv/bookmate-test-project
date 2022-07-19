@@ -343,14 +343,22 @@ Also additional test artifacts are available:
 > The link can be accessed only by authorized users.
 
 ## <a name="AllureTestOpsProject">Project in Allure TestOps</a>
-All test-cases in the project are imported and constantly updated from the code,\
+Test-cases in the project are imported and constantly updated from the code,
 so there is no need in complex process of synchronization manual test-cases and autotests.\
 It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.\
 Manual test-cases also can be added in TMS in case of need(via web interface or via code).
 <p align="center">
   <img src="images/screens/AllureTestOpsTests.png" alt="AllureTestOpsTests" width="1050">
 </p>
-///ADD SCHEME of test cases creation/updating
+
+```mermaid
+graph LR
+A[Test created/updated in the code] --> B[Build in Jenkins is triggered on push or started manually]
+B --> C[Jenkins build is done]
+C --> D[Allure TestOps launch related to the build marked as closed]
+D --> E[All executed tests are automatically updated according to the code]
+E --> A
+```
 
 ## <a name="AllureTestOpsStartTests">Ability to start a run of custom set of tests from Allure TestOps</a>
 Any person not related to autotest creation can select a set of tests, environment parameter(RunIn) and start a run.\
