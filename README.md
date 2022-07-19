@@ -83,7 +83,7 @@ gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 Additional parameters:
 > `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - credentials for selenoid\
 > `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
-> `-Dthreads=number_of_threads` can be added for parallel tests execution.
+> `-Dthreads=number_of_threads` can be added for parallel tests execution
 
 `tag` - defines a tag for running specific tests:
 >- *API*
@@ -100,7 +100,7 @@ Additional parameters:
 >- *android_selenoid*
 
 Additional properties are retrieved from the corresponding properties file(depending on `runIn` value):
-```
+```bash
 ./resources/config/project-${runIn}.properties
 ```
 
@@ -122,7 +122,7 @@ D --> J[android_selenoid]
 
 # <a name="PropertyFiles">Property files</a>
 Structure of `project-${runIn}.properties` file:
-```
+```properties
 remoteDriver=
 browser=
 user=
