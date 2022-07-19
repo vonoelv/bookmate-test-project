@@ -30,7 +30,9 @@ Brief list of interesting facts about the project:
 - [x] Parametrized build
 - [x] Different configuration files for test running depending on build parameters
 - [x] Config with Owner library
-- [x] Models for API tests using Lombok
+- [x] Using Lombok for models for API tests
+- [x] Serialization/deserialization API requests/responses using Jackson
+- [x] Using request/response specifications for API tests
 - [x] Custom Allure listener for beautiful API requests/responses logging
 - [x] Allure TestOps integration
 - [x] Autotests as test documentation
