@@ -145,24 +145,16 @@ platformVersion=
 <details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
 
-        remoteDriver=https://selenoid.autotests.cloud/wd/hub
-        browser=chrome
-        user=${selenoid_user_sys_prop}
-        key=${selenoid_key_sys_prop}
-        deviceName=
-        platformVersion=
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_selenoid.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
 <details>
     <summary><h4>project-browser_local.properties</h4></summary>
 
-        remoteDriver=
-        browser=chrome
-        user=
-        key=
-        deviceName=
-        platformVersion=
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_local.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
@@ -177,36 +169,24 @@ platformVersion=
 <details>
     <summary><h4>project-android_emulator.properties</h4></summary>
 
-        remoteDriver=http://localhost:4723/wd/hub
-        browser=
-        user=
-        key=
-        deviceName=Pixel_4_API_30
-        platformVersion=11.0
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_emulator.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
 <details>
     <summary><h4>project-android_real.properties</h4></summary>
 
-        remoteDriver=http://localhost:4723/wd/hub
-        browser=
-        user=
-        key=
-        deviceName=5200aecd4956a489
-        platformVersion=8.0
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_real.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
 <details>
     <summary><h4>project-android_selenoid.properties</h4></summary>
 
-        remoteDriver=https://selenoid.autotests.cloud/wd/hub
-        browser=
-        user=enter_user
-        key=enter_key
-        deviceName=
-        platformVersion=
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_selenoid.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 </details>
 
