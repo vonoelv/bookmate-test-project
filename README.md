@@ -336,7 +336,7 @@ Also additional test artifacts are available:
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="AllureTestOps">Allure TestOps integration[](https://allure.autotests.cloud/project/1466/test-cases?treeId=2804)</a>
+# <a name="AllureTestOps">[Allure TestOps](https://allure.autotests.cloud/project/1466/test-cases?treeId=2804) integration</a>
 > The link can be accessed only by authorized users.
 
 ## <a name="AllureTestOpsProject">Project in Allure TestOps</a>
