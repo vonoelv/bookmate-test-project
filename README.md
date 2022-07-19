@@ -24,8 +24,8 @@
 
 
 # <a name="Description">Description</a>
-The test project consists of WebUI, API and mobile(android) tests.
-Brief list of interesting facts about the project:
+The test project consists of WebUI, API and mobile(android) tests.\
+A brief list of interesting facts about the project:
 - [x] Page Object
 - [x] Parametrized build
 - [x] Different configuration files for test running depending on build parameters
