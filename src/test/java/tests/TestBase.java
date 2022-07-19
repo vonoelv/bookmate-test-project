@@ -10,7 +10,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -64,7 +63,7 @@ public class TestBase {
             case "android_selenoid":
                 videoSelenoid(sessionId);
                 break;
-            case "browser_remote":
+            case "browser_selenoid":
                 videoSelenoid(sessionId);
             case "browser_local":
                 //https://github.com/selenide/selenide/issues/1636
