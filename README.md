@@ -357,7 +357,7 @@ state "Test created/updated in the code" as A
 state "Build in Jenkins is triggered on push or started manually" as B
 state "Jenkins build is done" as C
 state "Allure TestOps launch related to the build marked as closed" as D
-state "All executed tests are automatically updated according to the code" as E
+state "All executed test-cases are automatically created/updated according to the code" as E
 [*] --> A
 A --> B
 B --> C
