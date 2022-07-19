@@ -352,11 +352,17 @@ Manual test-cases also can be added in TMS in case of need(via web interface or 
 </p>
 
 ```mermaid
-graph LR
-A[Test created/updated in the code] --> B[Build in Jenkins is triggered on push or started manually]
-B --> C[Jenkins build is done]
-C --> D[Allure TestOps launch related to the build marked as closed]
-D --> E[All executed tests are automatically updated according to the code]
+stateDiagram-v2
+state "Test created/updated in the code" as A
+state "Build in Jenkins is triggered on push or started manually" as B
+state "Jenkins build is done" as C
+state "Allure TestOps launch related to the build marked as closed" as D
+state "All executed tests are automatically updated according to the code" as E
+[*] --> A
+A --> B
+B --> C
+C --> D
+D --> E
 E --> A
 ```
 
