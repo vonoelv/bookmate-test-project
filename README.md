@@ -12,7 +12,7 @@
 + [How to run](#Jenkins)
     + [Gradle command](#GradleCommand)
     + [Property files](#PropertyFiles)
-      + [Examples of property files](#PropertiesExamples)
+      + [Default property files](#PropertyFilesDefaults)
     + [Running tests in Jenkins](#RunInJenkins)
 + [Notifications in Telegram about results](#TelegramNotifications)
 + [Test results report in Allure Report](#AllureReport)
@@ -39,6 +39,9 @@ A brief list of interesting facts about the project:
 - [x] Github webhooks on each push to trigger Jenkins build
 - [x] Jira integration
 - [x] Parallel execution
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./resources/config/project-android_browserstack.properties) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->
 
 
 # <a name="Technology">Tools and technologies</a>
@@ -133,22 +136,22 @@ platformVersion=
 
 >- *remoteDriver* - URL for remote WebDriver
 >- *browser* - browser for running WebUI tests
->- *user* - login for authorization
->- *key* - key\password for authorization
+>- *user* - login for authorization. By default, it's ${browserstack_user_sys_prop} or ${selenide_user_sys_prop}, that is it comes from system properties
+>- *key* - key\password for authorization. By default, it's ${browserstack_key_sys_prop} or ${selenide_key_sys_prop}, that is it comes from system properties
 >- *deviceName* - android device name or serial number
 >- *platformVersion* - android version
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-## <a name="PropertiesExamples">Examples of property files</a>
+## <a name="PropertyFilesDefaults">Default property files</a>
 
 <details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
 
         remoteDriver=https://selenoid.autotests.cloud/wd/hub
         browser=chrome
-        user=enter_user
-        key=enter_key
+        user=${selenoid_user_sys_prop}
+        key=${selenoid_key_sys_prop}
         deviceName=
         platformVersion=
 
@@ -171,10 +174,10 @@ platformVersion=
 
         remoteDriver=
         browser=
-        user=enter_user
-        key=enter_key
-        deviceName=
-        platformVersion=
+        user=${browserstack_user_sys_prop}
+        key=${browserstack_key_sys_prop}
+        deviceName=Samsung Galaxy S22 Ultra
+        platformVersion=12.0
 
 </details>
 
