@@ -138,7 +138,7 @@ platformVersion=
 
 >- *remoteDriver* - URL for remote WebDriver
 >- *browser* - browser for running WebUI tests
->- *user* - login for authorization. By default, it's \${browserstack_user_sys_prop} or \${selenide_user_sys_prop}, that is it comes from system properties
+>- *user* - login for authorization. By default, it's \$\{browserstack_user_sys_prop\} or \${selenide_user_sys_prop}, that is it comes from system properties
 >- *key* - key/password for authorization. By default, it's ${browserstack_key_sys_prop} or ${selenide_key_sys_prop}, that is it comes from system properties
 >- *deviceName* - android device name or serial number
 >- *platformVersion* - android version
