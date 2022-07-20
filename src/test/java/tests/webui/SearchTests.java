@@ -38,7 +38,7 @@ class SearchTests extends TestBase {
             "Bookshelves | 24 Free Vintage Sci-Fi"
     }, delimiter = '|')
 
-    @ParameterizedTest(name = "{arguments}")
+    @ParameterizedTest(name = "\"{arguments}\"")
     @DisplayName("An existing item can be found with filter:")
     void searchTestWithFilter(String itemType, String itemName) {
         Allure.getLifecycle().updateTestCase(test ->
