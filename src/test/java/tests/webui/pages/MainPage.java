@@ -3,20 +3,16 @@ package tests.webui.pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import tests.webui.domain.HeaderTab;
 
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class MainPage {
 
-    private final SelenideElement overview = $("header__controls header__controls_left").$(".logo");
-    private final SelenideElement search = $("header-nav__links").$(withText("Search"));
-    private final SelenideElement books = $("header-nav__links").$(withText("Books"));
-    private final SelenideElement audiobooks = $("header-nav__links").$(withText("Audiobooks"));
-    private final SelenideElement comics = $("header-nav__links").$(withText("Comics"));
-    private final SelenideElement bookshelves = $("header-nav__links").$(withText("Bookshelves"));
-    private final SelenideElement giftCards = $("header-nav__links").$(withText("Gift cards"));
+    private final SelenideElement bookmateLogo = $(".header__controls.header__controls_left").$(".logo");
+    private final SelenideElement headerTabsSection = $(".header-nav__links");
     private final SelenideElement buySubscription = $(".subscription-button");
     private final SelenideElement login = $(".login-button");
     private final SelenideElement languageSelector = $(".languages-button");
@@ -24,12 +20,23 @@ public class MainPage {
 
 
     private final LoginPage loginPage = new LoginPage();
-    private final SearchPage searchPage = new SearchPage();
 
-    @Step("Open search")
-    public SearchPage openSearch() {
-        search.click();
-        return searchPage;
+    @Step("Click on bookmate header logo")
+    public MainPage clickOnBookmateLogo() {
+        bookmateLogo.click();
+        return this;
+    }
+
+    @Step("Open header tab {headerTab}")
+    public MainPage openHeaderTab(HeaderTab headerTab) {
+        headerTabsSection.$(withText(headerTab.name)).click();
+        return this;
+    }
+
+    @Step("Click 'Buy subscription' button")
+    public MainPage openSubscriptionPage() {
+        buySubscription.click();
+        return this;
     }
 
     @Step("Open login dialog")
@@ -41,7 +48,7 @@ public class MainPage {
     @Step("Select site language: {language}")
     public MainPage selectLanguage(String language) {
         languageSelector.hover();
-        languagesList.$(withText("English")).click();
+        languagesList.$(withText(language)).click();
         acceptCookiesIfNeeded();
         return this;
     }
@@ -58,6 +65,12 @@ public class MainPage {
     public MainPage login(String email, String password) {
         openLoginDialog();
         loginPage.login(email, password);
+        return this;
+    }
+
+    @Step("Verify page {url} is open")
+    public MainPage checkPageIsOpen(String url) {
+        webdriver().shouldHave(url(url));
         return this;
     }
 

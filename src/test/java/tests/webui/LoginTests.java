@@ -42,7 +42,6 @@ class LoginTests extends TestBase {
     @Story("Login by email")
     @DisplayName("Unsuccessful login through UI - incorrect password")
     void checkLoginWithWrongPassword() {
-        //gogib54376@satedly.com // qwerty12345
         mainPage.login("jojiyik256@lenfly.com", "qwerty12345");
         new LoginPage().checkLoginFormError("Incorrect username or password");
     }

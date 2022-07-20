@@ -32,4 +32,10 @@ public class LoginPage {
         return this;
     }
 
+    @Step("Login page should be visible")
+    public LoginPage checkLoginPageIsVisible() {
+        emailOption.shouldBe(visible);
+        return this;
+    }
+
 }
