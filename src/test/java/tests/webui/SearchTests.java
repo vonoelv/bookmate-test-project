@@ -41,10 +41,8 @@ class SearchTests extends TestBase {
     @ParameterizedTest(name = "{arguments}")
     @DisplayName("An existing item can be found with filter:")
     void searchTestWithFilter(String itemType, String itemName) {
-        Allure.parameter("itemType", itemType);
-        Allure.parameter("itemName", itemName);
-//        Allure.getLifecycle().updateTestCase(test ->
-//                test.setFullName("An existing item can be found with filter: " + itemType + ", \"" + itemName + "\""));
+        Allure.getLifecycle().updateTestCase(test ->
+                test.setFullName("An existing item can be found with filter: " + itemType + ", \"" + itemName + "\""));
         searchPage
                 .performSearch(itemName)
                 .selectFilter(itemType)
