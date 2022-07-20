@@ -76,7 +76,7 @@ The autotests in this project are written in `Java` using `Selenide` framework.\
 `Android Studio tools`, `Appium` - to tun mobile tests locally in a mobile device emulator.\
 `Allure Report` - for test results visualisation.\
 `Telegram Bot` - for test results notifications.\
-`Allure TestOps` - as Tests Management System.
+`Allure TestOps` - as Test Management System.
 
 [Back to the table of contents ⬆](#TableOfContents)
 
