@@ -31,11 +31,12 @@
 The test project consists of WebUI, API and mobile(android) tests.\
 A brief list of interesting facts about the project:
 - [x] Page Object
+- [x] Parametrized tests
 - [x] Parametrized build
 - [x] Different configuration files for test running depending on build parameters
 - [x] Config with Owner library
 - [x] Using Lombok for models for API tests
-- [x] Serialization/deserialization API requests/responses using Jackson
+- [x] Objects serialization/deserialization for API requests/responses using Jackson
 - [x] Using request/response specifications for API tests
 - [x] Custom Allure listener for beautiful API requests/responses logging
 - [x] Allure TestOps integration

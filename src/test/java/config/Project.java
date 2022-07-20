@@ -11,7 +11,7 @@ public class Project {
     static {
         System.out.println(System.getProperties());
         String errorMessage = "'%s' value is null or empty";
-        assertThat(config.runIn()).withFailMessage(errorMessage, "tool").isNotEmpty();
+        assertThat(config.runIn()).withFailMessage(errorMessage, "runIn").isNotEmpty();
         switch (config.runIn()) {
             case "browser_selenoid":
                 validateProperty(config.remoteDriver(), "remoteDriver");
@@ -31,7 +31,7 @@ public class Project {
                 validateProperty(config.platformVersion(), "platformVersion");
                 break;
             default:
-                throw new IllegalStateException("Unexpected 'tool' value: " + config);
+                throw new IllegalStateException("Unexpected 'runIn' value: " + config);
         }
         System.out.println("CONFIG:");
         System.out.println(config.runIn());
