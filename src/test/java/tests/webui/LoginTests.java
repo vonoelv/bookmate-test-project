@@ -1,5 +1,6 @@
 package tests.webui;
 
+import config.App;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -33,16 +34,16 @@ class LoginTests extends TestBase {
     @Story("Login by email")
     @DisplayName("Successful login through UI")
     void checkLogin() {
-        mainPage.login("jojiyik256@lenfly.com", "qwerty")
+        mainPage.login(App.config.login(), App.config.password())
                 .openInMainMenu("Settings");
-        new SettingsPage().checkEmail("jojiyik256@lenfly.com");
+        new SettingsPage().checkEmail(App.config.login());
     }
 
     @Test
     @Story("Login by email")
     @DisplayName("Unsuccessful login through UI - incorrect password")
     void checkLoginWithWrongPassword() {
-        mainPage.login("jojiyik256@lenfly.com", "qwerty12345");
+        mainPage.login(App.config.login(), App.config.password() + "12345");
         new LoginPage().checkLoginFormError("Incorrect username or password");
     }
 }

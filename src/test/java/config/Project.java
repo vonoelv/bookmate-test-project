@@ -10,8 +10,7 @@ public class Project {
 
     static {
         System.out.println(System.getProperties());
-        String errorMessage = "'%s' value is null or empty";
-        assertThat(config.runIn()).withFailMessage(errorMessage, "runIn").isNotEmpty();
+        validateProperty(config.runIn(), "runIn");
         switch (config.runIn()) {
             case "browser_selenoid":
                 validateProperty(config.remoteDriver(), "remoteDriver");

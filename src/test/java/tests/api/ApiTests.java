@@ -1,5 +1,6 @@
 package tests.api;
 
+import config.App;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -15,26 +16,28 @@ import tests.api.steps.ApiSteps;
 @Owner("vonoelv")
 class ApiTests {
     ApiSteps apiSteps = new ApiSteps();
-    String book1Uuid = "ICx1CRPs";
-    String book2Uuid = "vtMbZVZ3";
+
+    //SHOULD be generated:
+    // TEST_BOOKSHELF_<random_string>
+    // TEST_BOOKSHELF_ANNOTATION_<random_string>
     String NEW_BOOKSHELF_NAME = "One more bookshelf99";
     String NEW_BOOKSHELF_ANNOTATION = "Annotation for bookshelf99";
 
     @Test
     @DisplayName("Ability to add a book to the library")
     void checkAddingBookToLibrary() {
-        apiSteps.ensureBookIsNotInLibrary(book1Uuid);
-        Book addedBook = apiSteps.addBookToLibrary(book1Uuid);
-        apiSteps.checkAddedBookResponseParameters(addedBook, book1Uuid);
+        apiSteps.ensureBookIsNotInLibrary(App.config.book1Uuid());
+        Book addedBook = apiSteps.addBookToLibrary(App.config.book1Uuid());
+        apiSteps.checkAddedBookResponseParameters(addedBook, App.config.book1Uuid());
         apiSteps.checkBookIsInLibrary(addedBook.getUuid());
     }
 
     @Test
     @DisplayName("Ability to remove a book from the library")
     void checkRemovingBookFromLibrary() {
-        String libraryCardUuid = apiSteps.ensureBookIsInLibrary(book2Uuid);
+        String libraryCardUuid = apiSteps.ensureBookIsInLibrary(App.config.book2Uuid());
         apiSteps.removeBookFromLibrary(libraryCardUuid);
-        apiSteps.checkBookIsNotInLibrary(book2Uuid);
+        apiSteps.checkBookIsNotInLibrary(App.config.book2Uuid());
     }
 
     @Test

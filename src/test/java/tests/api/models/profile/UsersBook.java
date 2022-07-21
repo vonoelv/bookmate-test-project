@@ -12,4 +12,8 @@ public class UsersBook {
     private String type;
     @JsonProperty("library_card")
     UsersLibraryCard usersLibraryCard;
+
+    public boolean isInitialized() {
+        return (title != null) && (uuid != null) && (type != null) && (usersLibraryCard != null);
+    }
 }
