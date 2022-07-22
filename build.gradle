@@ -43,7 +43,7 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.aspectj:aspectjweaver:1.9.6",
-            "com.github.kklisura.cdt:cdt-java-client:4.0.0")
+            "com.github.javafaker:javafaker:1.0.2")
 
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion",
