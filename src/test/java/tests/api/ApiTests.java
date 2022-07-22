@@ -7,12 +7,12 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.api.models.bookshelves.Bookshelf;
-import tests.api.models.profile.library_cards.Book;
+import tests.api.models.bookshelves.post.Bookshelf;
+import tests.api.models.bookshelves.posts.BookshelfPost;
+import tests.api.models.profile.library_cards.post.Book;
 import tests.api.steps.ApiSteps;
 
-import static helpers.RandomUtils.getRandomBookshelfAnnotation;
-import static helpers.RandomUtils.getRandomBookshelfName;
+import static helpers.RandomUtils.*;
 
 
 @Tag("API")
@@ -61,5 +61,16 @@ class ApiTests {
         Bookshelf bookshelf = apiSteps.createNewBookshelf(getRandomBookshelfName(), getRandomBookshelfAnnotation());
         apiSteps.deleteBookshelf(bookshelf.getUuid());
         apiSteps.checkBookshelfDoesNotExist(bookshelf);
+    }
+
+    @Test
+    @DisplayName("Ability to add a book to a bookshelf")
+    void checkAddingBookToBookshelf() {
+        Bookshelf bookshelf = apiSteps.createNewBookshelf(getRandomBookshelfName(), getRandomBookshelfAnnotation());
+        String annotation = getRandomBookshelfBookAnnotation();
+        BookshelfPost bookshelfPost = apiSteps.addBookToBookshelf(App.config.book1Uuid(), bookshelf.getUuid(), annotation);
+        apiSteps.checkAddBookOnBookshelfResponseParameters(
+                bookshelfPost, annotation, App.config.book1Uuid(), bookshelf.getUuid());
+        apiSteps.checkBookIsOnBookshelf(App.config.book1Uuid(), bookshelf.getUuid());
     }
 }

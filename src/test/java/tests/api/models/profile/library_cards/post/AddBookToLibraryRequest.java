@@ -1,4 +1,4 @@
-package tests.api.models.profile.library_cards;
+package tests.api.models.profile.library_cards.post;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AddedBook {
+public class AddBookToLibraryRequest {
     @JsonProperty("book_uuid")
     private String bookUuid;
 }

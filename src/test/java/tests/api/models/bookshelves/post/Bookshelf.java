@@ -1,4 +1,4 @@
-package tests.api.models.bookshelves;
+package tests.api.models.bookshelves.post;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

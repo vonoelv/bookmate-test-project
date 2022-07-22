@@ -1,14 +1,19 @@
 package tests.api.steps;
 
 import io.qameta.allure.Step;
-import tests.api.models.bookshelves.Bookshelf;
-import tests.api.models.bookshelves.NewBookshelfResponse;
-import tests.api.models.profile.books.UsersBook;
-import tests.api.models.profile.books.UsersBooks;
-import tests.api.models.profile.bookshelves.BookshelvesResponse;
-import tests.api.models.profile.library_cards.AddedBook;
-import tests.api.models.profile.library_cards.Book;
-import tests.api.models.profile.library_cards.LibraryCardWrapper;
+import tests.api.models.bookshelves.post.Bookshelf;
+import tests.api.models.bookshelves.post.NewBookshelfResponse;
+import tests.api.models.bookshelves.posts.BookshelfPost;
+import tests.api.models.bookshelves.posts.get.GetAllBooksOnBookshelfResponse;
+import tests.api.models.bookshelves.posts.post.AddBookOnBookshelfResponse;
+import tests.api.models.bookshelves.posts.post.AddBookToBookshelfRequest;
+import tests.api.models.bookshelves.posts.post.Post;
+import tests.api.models.profile.books.get.GetAllUsersBooksRequests;
+import tests.api.models.profile.books.get.UsersBook;
+import tests.api.models.profile.bookshelves.get.BookshelvesResponse;
+import tests.api.models.profile.library_cards.post.AddBookToLibraryRequest;
+import tests.api.models.profile.library_cards.post.AddBookToLibraryResponse;
+import tests.api.models.profile.library_cards.post.Book;
 import tests.api.specs.Specs;
 
 import java.io.File;
@@ -25,15 +30,15 @@ public class ApiSteps {
 
     @Step("Perform request to add book to library")
     public Book addBookToLibrary(String bookUuid) {
-        AddedBook addedBook = new AddedBook().setBookUuid(bookUuid);
+        AddBookToLibraryRequest body = new AddBookToLibraryRequest().setBookUuid(bookUuid);
         return given()
                 .spec(request)
-                .body(addedBook)
+                .body(body)
                 .when()
                 .post("/profile/library_cards")
                 .then()
                 .spec(Specs.response)
-                .extract().response().as(LibraryCardWrapper.class)
+                .extract().response().as(AddBookToLibraryResponse.class)
                 .getLibraryCard().getBook();
     }
 
@@ -57,7 +62,7 @@ public class ApiSteps {
                 .get("/profile/books")
                 .then()
                 .spec(Specs.response)
-                .extract().response().as(UsersBooks.class)
+                .extract().response().as(GetAllUsersBooksRequests.class)
                 .getBooks();
         return getAllPages(requestOnePage);
     }
@@ -182,4 +187,47 @@ public class ApiSteps {
                 .log().all()
                 .statusCode(204);
     }
+
+    @Step("Perform request to add the book to the bookshelf")
+    public BookshelfPost addBookToBookshelf(String bookUuid, String bookshelfUuid, String annotation) {
+        AddBookToBookshelfRequest body = new AddBookToBookshelfRequest(new Post("book", bookUuid, annotation));
+        return given()
+                .spec(request)
+                .body(body)
+                .when()
+                .post("/bookshelves/" + bookshelfUuid + "/posts")
+                .then()
+                .spec(response)
+                .extract().response().as(AddBookOnBookshelfResponse.class)
+                .getPost();
+    }
+
+    @Step("Verify the book is on the bookshelf")
+    public void checkBookIsOnBookshelf(String bookUuid, String bookshelfUuid) {
+        assertThat(getAllPostsForBookshelf(bookshelfUuid).stream()
+                .anyMatch((post) -> post.getResource().getUuid().equals(bookUuid)))
+                .isTrue();
+    }
+
+    private List<BookshelfPost> getAllPostsForBookshelf(String bookshelfUuid) {
+        Function<Integer, List<BookshelfPost>> requestOnePage = (page) ->
+                given()
+                        .spec(request)
+                        .formParams("page", page, "per_page", 20)
+                        .when()
+                        .get("/bookshelves/" + bookshelfUuid + "/posts")
+                        .then()
+                        .spec(response)
+                        .extract().response().as(GetAllBooksOnBookshelfResponse.class)
+                        .getPosts();
+        return getAllPages(requestOnePage);
+    }
+
+    @Step("Verify annotation, uuids of the book and the bookshelf in the response")
+    public void checkAddBookOnBookshelfResponseParameters(BookshelfPost bookshelfPost, String annotation, String bookUuid, String bookshelfUuid) {
+        assertThat(bookshelfPost.getAnnotation()).isEqualTo(annotation);
+        assertThat(bookshelfPost.getResource().getUuid()).isEqualTo(bookUuid);
+        assertThat(bookshelfPost.getBookshelf().getUuid()).isEqualTo(bookshelfUuid);
+    }
+
 }

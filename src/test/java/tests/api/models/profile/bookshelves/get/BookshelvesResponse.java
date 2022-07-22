@@ -1,8 +1,8 @@
-package tests.api.models.profile.bookshelves;
+package tests.api.models.profile.bookshelves.get;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import tests.api.models.bookshelves.Bookshelf;
+import tests.api.models.bookshelves.post.Bookshelf;
 
 import java.util.List;
 

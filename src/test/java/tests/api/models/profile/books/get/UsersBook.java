@@ -1,4 +1,4 @@
-package tests.api.models.profile.books;
+package tests.api.models.profile.books.get;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

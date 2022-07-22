@@ -10,6 +10,10 @@ public class RandomUtils {
     }
 
     public static String getRandomBookshelfAnnotation() {
-        return faker.book().publisher() + faker.bothify("(######??????).");
+        return faker.shakespeare().hamletQuote() + faker.bothify("(######??????).");
+    }
+
+    public static String getRandomBookshelfBookAnnotation() {
+        return faker.shakespeare().kingRichardIIIQuote() + faker.bothify("(######??????).");
     }
 }
