@@ -3,12 +3,16 @@ package tests.api;
 import config.App;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.api.models.book.Book;
-import tests.api.models.bookshelfs.Bookshelf;
+import tests.api.models.bookshelves.Bookshelf;
+import tests.api.models.profile.library_cards.Book;
 import tests.api.steps.ApiSteps;
+
+import static helpers.RandomUtils.getRandomBookshelfAnnotation;
+import static helpers.RandomUtils.getRandomBookshelfName;
 
 
 @Tag("API")
@@ -17,11 +21,12 @@ import tests.api.steps.ApiSteps;
 class ApiTests {
     ApiSteps apiSteps = new ApiSteps();
 
-    //SHOULD be generated:
-    // TEST_BOOKSHELF_<random_string>
-    // TEST_BOOKSHELF_ANNOTATION_<random_string>
-    String NEW_BOOKSHELF_NAME = "One more bookshelf99";
-    String NEW_BOOKSHELF_ANNOTATION = "Annotation for bookshelf99";
+    @AfterAll
+    static void cleanUp() {
+        ApiSteps apiSteps = new ApiSteps();
+        apiSteps.getAllBookshelves().forEach((bookshelf) -> apiSteps.deleteBookshelf(bookshelf.getUuid()));
+        apiSteps.getAllBooks().forEach((book) -> apiSteps.removeBookFromLibrary(book.getUsersLibraryCard().getUuid()));
+    }
 
     @Test
     @DisplayName("Ability to add a book to the library")
@@ -43,15 +48,17 @@ class ApiTests {
     @Test
     @DisplayName("Ability to create new bookshelf")
     void checkCreatingNewBookshelf() {
-        Bookshelf bookshelf = apiSteps.createNewBookshelf(NEW_BOOKSHELF_NAME, NEW_BOOKSHELF_ANNOTATION);
-        apiSteps.checkNewBookshelfResponseParameters(bookshelf, NEW_BOOKSHELF_NAME, NEW_BOOKSHELF_ANNOTATION);
-        apiSteps.checkBookshelfExists(bookshelf);
+        String bookshelfName = getRandomBookshelfName();
+        String bookshelfAnnotation = getRandomBookshelfAnnotation();
+        Bookshelf createdBookshelf = apiSteps.createNewBookshelf(bookshelfName, bookshelfAnnotation);
+        apiSteps.checkNewBookshelfResponseParameters(createdBookshelf, bookshelfName, bookshelfAnnotation);
+        apiSteps.checkBookshelfExists(createdBookshelf);
     }
 
     @Test
     @DisplayName("Ability to delete a bookshelf")
     void checkDeletingABookshelf() {
-        Bookshelf bookshelf = apiSteps.createNewBookshelf(NEW_BOOKSHELF_NAME, NEW_BOOKSHELF_ANNOTATION);
+        Bookshelf bookshelf = apiSteps.createNewBookshelf(getRandomBookshelfName(), getRandomBookshelfAnnotation());
         apiSteps.deleteBookshelf(bookshelf.getUuid());
         apiSteps.checkBookshelfDoesNotExist(bookshelf);
     }

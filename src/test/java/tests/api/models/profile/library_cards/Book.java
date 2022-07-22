@@ -1,8 +1,7 @@
-package tests.api.models.book;
+package tests.api.models.profile.library_cards;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.Data;
 
 @Data

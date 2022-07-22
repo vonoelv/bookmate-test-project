@@ -1,18 +1,20 @@
 package tests.api.steps;
 
 import io.qameta.allure.Step;
-import tests.api.models.book.Book;
-import tests.api.models.book.LibraryCardWrapper;
-import tests.api.models.bookshelfs.Bookshelf;
-import tests.api.models.bookshelfs.NewBookshelfResponse;
-import tests.api.models.profile.AddedBook;
-import tests.api.models.profile.BookshelvesResponse;
-import tests.api.models.profile.UsersBook;
-import tests.api.models.profile.UsersBooks;
+import tests.api.models.bookshelves.Bookshelf;
+import tests.api.models.bookshelves.NewBookshelfResponse;
+import tests.api.models.profile.books.UsersBook;
+import tests.api.models.profile.books.UsersBooks;
+import tests.api.models.profile.bookshelves.BookshelvesResponse;
+import tests.api.models.profile.library_cards.AddedBook;
+import tests.api.models.profile.library_cards.Book;
+import tests.api.models.profile.library_cards.LibraryCardWrapper;
 import tests.api.specs.Specs;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -48,14 +50,16 @@ public class ApiSteps {
 
     @Step("Request list of all books in user's library")
     public List<UsersBook> getAllBooks() {
-        return given()
+        Function<Integer, List<UsersBook>> requestOnePage = (page) -> given()
                 .spec(request)
+                .formParams("page", page, "per_page", 20)
                 .when()
-                .get("/profile/books?page=1&per_page=20")
+                .get("/profile/books")
                 .then()
                 .spec(Specs.response)
                 .extract().response().as(UsersBooks.class)
                 .getBooks();
+        return getAllPages(requestOnePage);
     }
 
     @Step("Ensure book is not in user's library")
@@ -138,13 +142,28 @@ public class ApiSteps {
 
     @Step("Request list of all user's bookshelves")
     public List<Bookshelf> getAllBookshelves() {
-        return given()
-                .spec(request)
-                .when()
-                .get("/profile/bookshelves?page=1&per_page=10")
-                .then()
-                .extract().response().as(BookshelvesResponse.class)
-                .getBookshelves();
+        Function<Integer, List<Bookshelf>> requestOnePage = (page) ->
+                given()
+                        .spec(request)
+                        .formParams("page", page, "per_page", 10)
+                        .when()
+                        .get("/profile/bookshelves")
+                        .then()
+                        .extract().response().as(BookshelvesResponse.class)
+                        .getBookshelves();
+        return getAllPages(requestOnePage);
+    }
+
+    private static <T> List<T> getAllPages(Function<Integer, List<T>> requestOnePage) {
+        List<T> result = new ArrayList<>();
+        List<T> onePage;
+        int page = 1;
+        do {
+            onePage = requestOnePage.apply(page);
+            result.addAll(onePage);
+            page++;
+        } while (!onePage.isEmpty());
+        return result;
     }
 
     @Step("Verify title and annotation in the response")

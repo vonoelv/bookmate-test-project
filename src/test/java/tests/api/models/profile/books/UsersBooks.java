@@ -1,10 +1,12 @@
-package tests.api.models.bookshelfs;
+package tests.api.models.profile.books;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NewBookshelfResponse {
-    Bookshelf bookshelf;
+public class UsersBooks {
+    private List<UsersBook> books;
 }
