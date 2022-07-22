@@ -1,8 +1,9 @@
 package tests.api.steps;
 
 import io.qameta.allure.Step;
-import tests.api.models.bookshelves.post.Bookshelf;
-import tests.api.models.bookshelves.post.NewBookshelfResponse;
+import tests.api.models.bookshelves.get.GetBookshelfResponse;
+import tests.api.models.bookshelves.post_put.Bookshelf;
+import tests.api.models.bookshelves.post_put.BookshelfResponse;
 import tests.api.models.bookshelves.posts.BookshelfPost;
 import tests.api.models.bookshelves.posts.get.GetAllBooksOnBookshelfResponse;
 import tests.api.models.bookshelves.posts.post.AddBookOnBookshelfResponse;
@@ -22,6 +23,7 @@ import java.util.List;
 import java.util.function.Function;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.http.ContentType.JSON;
 import static org.assertj.core.api.Assertions.assertThat;
 import static tests.api.specs.Specs.request;
 import static tests.api.specs.Specs.response;
@@ -131,7 +133,7 @@ public class ApiSteps {
                 .post("/bookshelves")
                 .then()
                 .spec(response)
-                .extract().response().as(NewBookshelfResponse.class)
+                .extract().response().as(BookshelfResponse.class)
                 .getBookshelf();
     }
 
@@ -172,7 +174,7 @@ public class ApiSteps {
     }
 
     @Step("Verify title and annotation in the response")
-    public void checkNewBookshelfResponseParameters(Bookshelf bookshelf, String expectedName, String expectedAnnotation) {
+    public void checkBookshelfResponseParameters(Bookshelf bookshelf, String expectedName, String expectedAnnotation) {
         assertThat(bookshelf.getTitle()).isEqualTo(expectedName);
         assertThat(bookshelf.getAnnotation()).isEqualTo(expectedAnnotation);
     }
@@ -230,4 +232,64 @@ public class ApiSteps {
         assertThat(bookshelfPost.getBookshelf().getUuid()).isEqualTo(bookshelfUuid);
     }
 
+    @Step("Perform request to remove the book from the bookshelf")
+    public void removeBookFromBookshelf(BookshelfPost post) {
+        given()
+                .spec(request)
+                .contentType(JSON)
+                .body("{}")
+                .when()
+                .delete("/bookshelves/" + post.getBookshelf().getUuid() + "/posts/" + post.getUuid())
+                .then()
+                .log().all()
+                .statusCode(204);
+    }
+
+    @Step("Verify the book is not on the bookshelf")
+    public void checkBookIsNotOnBookshelf(String bookUuid, String bookshelfUuid) {
+        assertThat(getAllPostsForBookshelf(bookshelfUuid).stream()
+                .noneMatch((post) -> post.getResource().getUuid().equals(bookUuid)))
+                .isTrue();
+    }
+
+    @Step("Request the bookshelf by uuid")
+    public Bookshelf getBookshelfByUuid(String bookshelfUuid) {
+        return given()
+                .spec(request)
+                .when()
+                .get("/bookshelves/" + bookshelfUuid)
+                .then()
+                .spec(response)
+                .extract().response().as(GetBookshelfResponse.class)
+                .getBookshelf();
+    }
+
+    @Step("Verify annotation, uuids and title of the bookshelf")
+    public void checkBookshelfParameters(Bookshelf bookshelf, String annotation, String uuid, String title) {
+        assertThat(bookshelf.getAnnotation()).isEqualTo(annotation);
+        assertThat(bookshelf.getUuid()).isEqualTo(uuid);
+        assertThat(bookshelf.getTitle()).isEqualTo(title);
+    }
+
+    @Step("Edit a bookshelf")
+    public Bookshelf editBookshelf(String uuid, String name, String annotation) {
+        return given()
+                .spec(request)
+                .contentType("multipart/form-data")
+                .multiPart("bookshelf[title]", name)
+                .multiPart("bookshelf[annotation]", annotation)
+                .multiPart("bookshelf[cover]", new File("./images/icons/bookmate.png"))
+                .multiPart("bookshelf[state]", "published")
+                .when()
+                .put("/bookshelves/" + uuid)
+                .then()
+                .spec(response)
+                .extract().response().as(BookshelfResponse.class)
+                .getBookshelf();
+    }
+
+
+    public void checkBookshelfDataByUuid(String uuid, String name, String annotation) {
+        checkBookshelfParameters(getBookshelfByUuid(uuid), annotation, uuid, name);
+    }
 }
