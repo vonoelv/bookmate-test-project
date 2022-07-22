@@ -39,7 +39,6 @@ public class TestBase {
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
         }
-        Configuration.browserSize = null;
     }
 
     @BeforeEach

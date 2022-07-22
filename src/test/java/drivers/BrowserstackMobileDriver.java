@@ -1,5 +1,6 @@
 package drivers;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverProvider;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -27,6 +28,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         System.out.println("Creating driver...");
+        Configuration.browserSize = null;
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");

@@ -1,5 +1,6 @@
 package drivers;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -21,6 +22,7 @@ public class SelenoidMobileDriver implements WebDriverProvider {
     @CheckReturnValue
     @Nonnull
     public WebDriver createDriver(Capabilities capabilities) {
+        Configuration.browserSize = null;
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
