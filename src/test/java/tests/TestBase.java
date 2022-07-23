@@ -22,7 +22,10 @@ public class TestBase {
     @BeforeAll
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
+        selectDriver();
+    }
 
+    private static void selectDriver() {
         switch (Project.config.runIn()) {
             case "browser_selenoid":
             case "browser_local":
@@ -50,10 +53,14 @@ public class TestBase {
     @AfterEach
     @Step("Save artifacts and close webdriver")
     public void afterEach() {
-        String sessionId = getSessionId();
         screenshotAs("Last screenshot");
         pageSource();
+        attachEnvDependingTestArtifacts();
+        closeWebDriver();
+    }
 
+    private void attachEnvDependingTestArtifacts() {
+        String sessionId = getSessionId();
         switch (Project.config.runIn()) {
             case "android_browserstack":
                 videoBrowserstack(sessionId);
@@ -65,6 +72,7 @@ public class TestBase {
             case "browser_selenoid":
                 videoSelenoid(sessionId);
             case "browser_local":
+                //No logs in firefox:
                 //https://github.com/selenide/selenide/issues/1636
                 //https://stackoverflow.com/questions/59192232/selenium-trying-to-get-firefox-console-logs-results-in-webdrivererror-http-me
                 if (!Project.config.browser().equals("firefox")) {
@@ -72,6 +80,5 @@ public class TestBase {
                 }
                 break;
         }
-        closeWebDriver();
     }
 }
