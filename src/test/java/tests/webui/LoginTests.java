@@ -20,6 +20,9 @@ import static com.codeborne.selenide.Selenide.open;
 @Owner("vonoelv")
 class LoginTests extends WebUiTestBase {
 
+    public static final SettingsPage settingsPage = new SettingsPage();
+    public static final LoginPage loginPage = new LoginPage();
+
     @BeforeEach
     @Override
     public void beforeEach() {
@@ -34,7 +37,7 @@ class LoginTests extends WebUiTestBase {
         mainPage
                 .login(App.config.login(), App.config.password())
                 .openInMainMenu("Settings");
-        new SettingsPage().checkEmail(App.config.login());
+        settingsPage.checkEmail(App.config.login());
     }
 
     @Test
@@ -42,6 +45,6 @@ class LoginTests extends WebUiTestBase {
     @DisplayName("Unsuccessful login through UI - incorrect password")
     void checkLoginWithWrongPassword() {
         mainPage.login(App.config.login(), App.config.password() + "12345");
-        new LoginPage().checkLoginFormError("Incorrect username or password");
+        loginPage.checkLoginFormError("Incorrect username or password");
     }
 }

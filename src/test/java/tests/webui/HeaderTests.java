@@ -1,6 +1,7 @@
 package tests.webui;
 
 
+import config.Project;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -22,7 +23,7 @@ class HeaderTests extends WebUiTestBase {
 
     @BeforeEach
     @Override
-    @Step("Open https://bookmate.com")
+    @Step("Open {Project.config.baseUrl()}")
     public void beforeEach() {
         open("/");
         mainPage.acceptCookiesIfNeeded();
@@ -32,7 +33,7 @@ class HeaderTests extends WebUiTestBase {
     @DisplayName("Overview page is open by click on bookmate logo")
     void checkClickOnLogo() {
         mainPage.clickOnBookmateLogo()
-                .checkPageIsOpen("https://bookmate.com/");
+                .checkPageIsOpen(Project.config.baseUrl() + "/");
     }
 
     @Test
@@ -48,7 +49,7 @@ class HeaderTests extends WebUiTestBase {
     @DisplayName("Ability to open Manage Subscription page")
     void checkSubscriptionPageOpening() {
         mainPage.openSubscriptionPage()
-                .checkPageIsOpen("https://bookmate.com/subscription?dscvr=header");
+                .checkPageIsOpen(Project.config.baseUrl() + "/subscription?dscvr=header");
     }
 
     @Test

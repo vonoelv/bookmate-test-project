@@ -1,14 +1,16 @@
 package tests.webui.domain;
 
+import config.Project;
+
 public enum Language {
-    ENGLISH("English", "https://bookmate.com/"),
-    RUSSIAN("Русский", "https://ru.bookmate.com/"),
-    SPANISH("Español", "https://es.bookmate.com/"),
-    DUTCH("Dansk", "https://da.bookmate.com/"),
-    TURKISH("Türkçe", "https://tr.bookmate.com/"),
-    BAHASA_INDONESIA("Bahasa Indonesia", "https://id.bookmate.com/"),
-    SWEDISH("Svenska", "https://sv.bookmate.com/"),
-    AZERBAIJANI("Azərbaycanca", "https://az.bookmate.com/");
+    ENGLISH("English", Project.config.baseUrl()),
+    RUSSIAN("Русский", Project.config.baseUrl().replace("//", "//ru.") + "/"),
+    SPANISH("Español", Project.config.baseUrl().replace("//", "//es.") + "/"),
+    DUTCH("Dansk", Project.config.baseUrl().replace("//", "//da.") + "/"),
+    TURKISH("Türkçe", Project.config.baseUrl().replace("//", "//tr.") + "/"),
+    BAHASA_INDONESIA("Bahasa Indonesia", Project.config.baseUrl().replace("//", "//id.") + "/"),
+    SWEDISH("Svenska", Project.config.baseUrl().replace("//", "//sv.") + "/"),
+    AZERBAIJANI("Azərbaycanca", Project.config.baseUrl().replace("//", "//az.") + "/");
 
     public final String langNative;
     public final String url;
@@ -17,5 +19,4 @@ public enum Language {
         this.langNative = langNative;
         this.url = url;
     }
-
 }

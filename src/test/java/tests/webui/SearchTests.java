@@ -17,7 +17,7 @@ class SearchTests extends WebUiTestBase {
 
     @BeforeEach
     @Override
-    @Step("Open https://bookmate.com/search")
+    @Step("Open {Project.config.baseUrl()}/search")
     public void beforeEach() {
         open("/search");
         mainPage.acceptCookiesIfNeeded();
