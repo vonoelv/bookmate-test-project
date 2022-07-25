@@ -24,7 +24,6 @@ public class WebUiDriver {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }
-
         switch (Project.config.browser()) {
             case "chrome":
                 setChromeOptions(capabilities);

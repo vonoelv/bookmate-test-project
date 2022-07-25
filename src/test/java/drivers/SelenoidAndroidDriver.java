@@ -5,6 +5,7 @@ import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
+import lombok.NonNull;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -16,12 +17,12 @@ import java.net.URL;
 import static config.Project.config;
 import static java.lang.String.format;
 
-public class SelenoidMobileDriver implements WebDriverProvider {
+public class SelenoidAndroidDriver implements WebDriverProvider {
 
     @Override
     @CheckReturnValue
     @Nonnull
-    public WebDriver createDriver(Capabilities capabilities) {
+    public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         Configuration.browserSize = null;
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
@@ -36,7 +37,6 @@ public class SelenoidMobileDriver implements WebDriverProvider {
         options.setLanguage("en");
         options.setAppPackage("com.bookmate");
         options.setAppActivity("com.bookmate.app.LaunchActivity");
-
         try {
             String remoteDriverWithCredentials = config.remoteDriver()
                     .replace("https://", format("https://%s:%s@", config.user(), config.key()));

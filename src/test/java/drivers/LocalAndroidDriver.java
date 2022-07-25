@@ -15,12 +15,12 @@ import java.net.URL;
 
 import static config.Project.config;
 
-public class LocalMobileDriver implements WebDriverProvider {
+public class LocalAndroidDriver implements WebDriverProvider {
 
     @Override
     @CheckReturnValue
     @Nonnull
-    public WebDriver createDriver(Capabilities capabilities) {
+    public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         Configuration.browserSize = null;
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
@@ -32,7 +32,6 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.setLanguage("en");
         options.setAppPackage("com.bookmate");
         options.setAppActivity("com.bookmate.app.LaunchActivity");
-
         try {
             return new AndroidDriver(new URL(config.remoteDriver()), options);
         } catch (MalformedURLException e) {

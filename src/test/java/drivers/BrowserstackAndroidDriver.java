@@ -7,6 +7,7 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import javax.annotation.CheckReturnValue;
 import javax.annotation.Nonnull;
 import java.io.File;
 import java.net.MalformedURLException;
@@ -18,14 +19,15 @@ import static java.lang.String.format;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class BrowserstackMobileDriver implements WebDriverProvider {
+public class BrowserstackAndroidDriver implements WebDriverProvider {
 
     private static final String endpointForApkUpload = "https://%s:%s@api-cloud.browserstack.com/app-automate/upload";
     private static final String UPLOADED_APK_URL = uploadAPK();
     private static final String remoteDriver = "http://hub.browserstack.com/wd/hub";
 
-    @Nonnull
     @Override
+    @CheckReturnValue
+    @Nonnull
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         System.out.println("Creating driver...");
         Configuration.browserSize = null;
@@ -40,7 +42,6 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("project", "Bookmate");
         mutableCapabilities.setCapability("build", "browserstack-build-1");
         mutableCapabilities.setCapability("name", "bookmate_test");
-
         return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
     }
 
