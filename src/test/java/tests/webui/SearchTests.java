@@ -6,9 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import tests.TestBase;
-import tests.webui.pages.MainPage;
-import tests.webui.pages.SearchPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -16,10 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 @Epic("WebUI")
 @Feature("Search")
 @Owner("vonoelv")
-class SearchTests extends TestBase {
-
-    public SearchPage searchPage = new SearchPage();
-    public MainPage mainPage = new MainPage();
+class SearchTests extends WebUiTestBase {
 
     @BeforeEach
     @Override
@@ -48,6 +42,5 @@ class SearchTests extends TestBase {
                 .performSearch(itemName)
                 .selectFilter(itemType)
                 .checkItemIsInResults(itemType, itemName);
-
     }
 }

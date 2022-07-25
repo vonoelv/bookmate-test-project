@@ -9,10 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.TestBase;
 import tests.webui.domain.HeaderTab;
 import tests.webui.domain.Language;
-import tests.webui.pages.MainPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -20,9 +18,7 @@ import static com.codeborne.selenide.Selenide.open;
 @Epic("WebUI")
 @Feature("Header")
 @Owner("vonoelv")
-class HeaderTests extends TestBase {
-
-    public MainPage mainPage = new MainPage();
+class HeaderTests extends WebUiTestBase {
 
     @BeforeEach
     @Override
