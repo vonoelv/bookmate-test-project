@@ -11,6 +11,11 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class MainPage {
 
+    public static final SelenideElement mainContent = $(".showcase");
+    public static final SelenideElement headerAvatar = $(".header__avatar");
+    public static final SelenideElement mainMenuDropdown = $(".header-dropdown");
+    public static final SelenideElement cookiesMessage = $(".cookies-message");
+    public static final SelenideElement cookiesMessageConfirmButton = $(".cookies-message__button_primary");
     private final SelenideElement bookmateLogo = $(".header__controls.header__controls_left").$(".logo");
     private final SelenideElement headerTabsSection = $(".header-nav__links");
     private final SelenideElement buySubscription = $(".subscription-button");
@@ -55,9 +60,9 @@ public class MainPage {
 
     @Step("Open in main menu")
     public MainPage openInMainMenu(String menuItem) {
-        $(".showcase").shouldBe(Condition.visible);
-        $(".header__avatar").click();
-        $(".header-dropdown").$(withText("Settings")).click();
+        mainContent.shouldBe(Condition.visible);
+        headerAvatar.click();
+        mainMenuDropdown.$(withText(menuItem)).click();
         return this;
     }
 
@@ -76,8 +81,8 @@ public class MainPage {
 
     public MainPage acceptCookiesIfNeeded() {
         for (int i = 0; i <= 8; i++) {
-            if ($(".cookies-message").isDisplayed()) {
-                $(".cookies-message__button_primary").click();
+            if (cookiesMessage.isDisplayed()) {
+                cookiesMessageConfirmButton.click();
                 System.out.println("Cookies message found and clicked");
                 return this;
             }

@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class SearchPage {
 
     public static final SelenideElement searchInput = $("#search-input");
+    public static final SelenideElement searchResults = $(".list__body");
+    public static final SelenideElement searchFiltersBox = $(".search-filters__inner");
 
     @Step("Perform search for: {searchText}")
     public SearchPage performSearch(String searchText) {
@@ -21,14 +23,13 @@ public class SearchPage {
 
     @Step("Check item {expectedText} exists in the search results")
     public SearchPage checkItemIsInResults(String itemType, String expectedText) {
-        //TODO: extract element
-        $(".list__body").$(withText(expectedText)).shouldBe(visible);
+        searchResults.$(withText(expectedText)).shouldBe(visible);
         return this;
     }
 
     @Step("Select filter {itemType} for search results")
     public SearchPage selectFilter(String itemType) {
-        $(".search-filters__inner").$(byText(itemType)).click();
+        searchFiltersBox.$(byText(itemType)).click();
         return this;
     }
 }

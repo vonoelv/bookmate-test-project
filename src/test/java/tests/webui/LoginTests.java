@@ -34,7 +34,8 @@ class LoginTests extends TestBase {
     @Story("Login by email")
     @DisplayName("Successful login through UI")
     void checkLogin() {
-        mainPage.login(App.config.login(), App.config.password())
+        mainPage
+                .login(App.config.login(), App.config.password())
                 .openInMainMenu("Settings");
         new SettingsPage().checkEmail(App.config.login());
     }
