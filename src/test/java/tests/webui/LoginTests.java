@@ -27,7 +27,7 @@ class LoginTests extends WebUiTestBase {
     @Override
     public void beforeEach() {
         open("");
-        mainPage.acceptCookiesIfNeeded();
+        mainPage.acceptCookies();
     }
 
     @Test

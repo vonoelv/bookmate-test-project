@@ -6,7 +6,8 @@ import io.qameta.allure.Step;
 import tests.webui.domain.HeaderTab;
 
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class MainPage {
@@ -54,7 +55,6 @@ public class MainPage {
     public MainPage selectLanguage(String language) {
         languageSelector.hover();
         languagesList.$(withText(language)).click();
-        acceptCookiesIfNeeded();
         return this;
     }
 
@@ -79,16 +79,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage acceptCookiesIfNeeded() {
-        for (int i = 0; i <= 8; i++) {
-            if (cookiesMessage.isDisplayed()) {
-                cookiesMessageConfirmButton.click();
-                System.out.println("Cookies message found and clicked");
-                return this;
-            }
-            sleep(500);
-        }
-        System.out.println("No cookies message found");
+    public MainPage acceptCookies() {
+        cookiesMessageConfirmButton.click();
         return this;
     }
 }

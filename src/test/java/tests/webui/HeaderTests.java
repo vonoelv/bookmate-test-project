@@ -26,7 +26,7 @@ class HeaderTests extends WebUiTestBase {
     @Step("Open {Project.config.baseUrl()}")
     public void beforeEach() {
         open("/");
-        mainPage.acceptCookiesIfNeeded();
+        mainPage.acceptCookies();
     }
 
     @Test
@@ -63,8 +63,11 @@ class HeaderTests extends WebUiTestBase {
     @DisplayName("Ability to switch to each language")
     void checkLanguageSwitching() {
         for (Language language : Language.values()) {
-            mainPage.selectLanguage(language.langNative)
-                    .checkPageIsOpen(language.url);
+            mainPage.selectLanguage(language.langNative);
+            if (!language.langNative.equals("English")) {
+                mainPage.acceptCookies();
+            }
+            mainPage.checkPageIsOpen(language.url);
         }
     }
 }

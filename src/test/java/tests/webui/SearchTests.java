@@ -20,7 +20,7 @@ class SearchTests extends WebUiTestBase {
     @Step("Open {Project.config.baseUrl()}/search")
     public void beforeEach() {
         open("/search");
-        mainPage.acceptCookiesIfNeeded();
+        mainPage.acceptCookies();
     }
 
     @CsvSource(value = {
