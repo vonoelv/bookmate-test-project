@@ -8,16 +8,10 @@ import org.aeonbits.owner.Config;
 })
 public interface AppConfig extends Config {
     String login();
-
     String password();
-
     String xCsrfToken();
-
     String csrf();
-
     String bms();
-
     String book1Uuid();
-
     String book2Uuid();
 }

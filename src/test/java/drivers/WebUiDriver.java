@@ -1,31 +1,31 @@
 package drivers;
 
 import com.codeborne.selenide.Configuration;
+import config.Project;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static config.Project.config;
 import static config.Project.isRemoteDriver;
 import static java.lang.String.format;
 
 public class WebUiDriver {
 
     public static void configure() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://bookmate.com";
-        Configuration.browser = config.browser();
+        Configuration.browserSize = Project.config.browserSize();
+        Configuration.baseUrl = Project.config.baseUrl();
+        Configuration.browser = Project.config.browser();
         MutableCapabilities capabilities = new DesiredCapabilities();
         if (isRemoteDriver()) {
-            Configuration.remote = config.remoteDriver()
-                    .replace("https://", format("https://%s:%s@", config.user(), config.key()));
+            Configuration.remote = Project.config.remoteDriver()
+                    .replace("https://", format("https://%s:%s@", Project.config.user(), Project.config.key()));
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }
 
-        switch (config.browser()) {
+        switch (Project.config.browser()) {
             case "chrome":
                 setChromeOptions(capabilities);
                 break;
@@ -54,6 +54,5 @@ public class WebUiDriver {
         Configuration.browserCapabilities = new FirefoxOptions()
                 .setProfile(profile)
                 .merge(capabilities);
-
     }
 }
