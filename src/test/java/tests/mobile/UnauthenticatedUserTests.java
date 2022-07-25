@@ -31,7 +31,7 @@ class UnauthenticatedUserTests extends AndroidTestBase {
 
     @Test
     @Story("Unauthenticated user banners")
-    @DisplayName("Sign up invitation banner is shown in My books section for an unauthorized user")
+    @DisplayName("Sign up banner in My books for an unauthenticated user")
     void checkMyBooksSignUpInvitationForUnauthorized() {
         welcomePage
                 .pressCloseButton()
@@ -49,7 +49,7 @@ class UnauthenticatedUserTests extends AndroidTestBase {
 
     @Test
     @Story("Unauthenticated user banners")
-    @DisplayName("Sign up invitation banner is shown in Profile section for an unauthorized user")
+    @DisplayName("Sign up banner in Profile for an unauthenticated user")
     void checkProfileSignUpInvitationForUnauthorized() {
         welcomePage
                 .pressCloseButton()
