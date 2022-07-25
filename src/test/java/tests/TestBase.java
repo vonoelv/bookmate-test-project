@@ -2,9 +2,9 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import config.Project;
-import drivers.BrowserstackMobileDriver;
-import drivers.LocalMobileDriver;
-import drivers.SelenoidMobileDriver;
+import drivers.BrowserstackAndroidDriver;
+import drivers.LocalAndroidDriver;
+import drivers.SelenoidAndroidDriver;
 import drivers.WebUiDriver;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -32,14 +32,14 @@ public class TestBase {
                 WebUiDriver.configure();
                 break;
             case "android_selenoid":
-                Configuration.browser = SelenoidMobileDriver.class.getName();
+                Configuration.browser = SelenoidAndroidDriver.class.getName();
                 break;
             case "android_browserstack":
-                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                Configuration.browser = BrowserstackAndroidDriver.class.getName();
                 break;
             case "android_emulator":
             case "android_real":
-                Configuration.browser = LocalMobileDriver.class.getName();
+                Configuration.browser = LocalAndroidDriver.class.getName();
                 break;
         }
     }
