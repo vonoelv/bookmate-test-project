@@ -2,6 +2,7 @@ package tests.mobile;
 
 import tests.TestBase;
 import tests.mobile.pages.MainBarPage;
+import tests.mobile.pages.main.ActivityPage;
 import tests.mobile.pages.main.LibraryPage;
 import tests.mobile.pages.main.MyBooksPage;
 import tests.mobile.pages.main.ProfilePage;
@@ -13,5 +14,6 @@ public class AndroidTestBase extends TestBase {
     public static final MainBarPage mainBarPage = new MainBarPage();
     public static final MyBooksPage myBooksPage = new MyBooksPage();
     public static final LibraryPage libraryPage = new LibraryPage();
+    public static final ActivityPage activityPage = new ActivityPage();
     public static final ProfilePage profilePage = new ProfilePage();
 }

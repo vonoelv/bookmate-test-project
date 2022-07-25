@@ -16,7 +16,6 @@ public class MainBarPage {
     private final SelenideElement libraryMenuBarItem = $(AppiumBy.id("com.bookmate:id/showcase"));
     private final SelenideElement activityMenuBarItem = $(AppiumBy.id("com.bookmate:id/feed"));
     private final SelenideElement profileMenuBarItem = $(AppiumBy.id("com.bookmate:id/profile"));
-
     private static final MyBooksPage myBooksPage = new MyBooksPage();
     private static final LibraryPage libraryPage = new LibraryPage();
     private static final ActivityPage activityPage = new ActivityPage();

@@ -3,7 +3,6 @@ package tests.mobile.pages.prelogin;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
-import tests.mobile.pages.main.MyBooksPage;
 
 import java.time.Duration;
 
@@ -11,10 +10,11 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class WelcomePage {
+    private final SelenideElement closeButton = $(AppiumBy.id("com.bookmate:id/close_btn"));
     private final SelenideElement continueButton = $(AppiumBy.id("com.bookmate:id/button_main_content_layout"));
     private final SelenideElement alreadyRegisteredButton = $(AppiumBy.id("com.bookmate:id/text_view_already_registered"));
     private static final AuthSelectionPage authSelectionPage = new AuthSelectionPage();
-    private static final MyBooksPage myBooksPage = new MyBooksPage();
+    private static final TopicsSelectionPage topicsSelectionPage = new TopicsSelectionPage();
 
     @Step("Wait until app is loaded")
     public WelcomePage waitPageLoading() {
@@ -34,10 +34,9 @@ public class WelcomePage {
         return authSelectionPage;
     }
 
-    public MyBooksPage loginWithEmail(String email, String password) {
-        pressAlreadyRegistered()
-                .pressEmailLogin()
-                .LoginWith(email, password);
-        return myBooksPage;
+    @Step("Press close button")
+    public TopicsSelectionPage pressCloseButton() {
+        closeButton.click();
+        return topicsSelectionPage;
     }
 }

@@ -11,8 +11,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.codeborne.selenide.Selenide.sleep;
-
 @Tag("Android")
 @Epic("Android")
 @Feature("Search")
@@ -24,8 +22,11 @@ class SearchTests extends AndroidTestBase {
     @Step("Open the app, login and open Library page")
     public void beforeEach() {
         super.beforeEach();
-        sleep(100000);
-        welcomePage.loginWithEmail(App.config.login(), App.config.password());
+        welcomePage
+                .waitPageLoading()
+                .pressAlreadyRegistered()
+                .pressEmailLogin()
+                .LoginWith(App.config.login(), App.config.password());
         mainBarPage.openLibrary();
     }
 

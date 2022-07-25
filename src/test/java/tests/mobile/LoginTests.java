@@ -19,14 +19,28 @@ class LoginTests extends AndroidTestBase {
     @Test
     @Story("Login by email")
     @DisplayName("Login is successful for a valid user")
-    void checkLoginAndAdded() {
+    void checkLoginWithValidUser() {
         welcomePage
                 .waitPageLoading()
                 .pressAlreadyRegistered()
                 .pressEmailLogin()
-                .LoginWith(App.config.login(), App.config.login());
+                .LoginWith(App.config.login(), App.config.password());
+        myBooksPage.waitFullyLoaded();
         mainBarPage
                 .openProfile()
                 .checkLoginName(App.config.login().substring(0, App.config.login().indexOf("@")));
+    }
+
+    @Test
+    @Story("Login by email")
+    @DisplayName("Login is prohibited for in case of wrong password")
+    void checkLoginWithWrongPassword() {
+        welcomePage
+                .waitPageLoading()
+                .pressAlreadyRegistered()
+                .pressEmailLogin()
+                .LoginWith(App.config.login(), App.config.password() + "12345")
+                .checkLoginErrorMessage("Incorrect username or password")
+                .checkEmailLoginDialogOpened();
     }
 }

@@ -14,10 +14,6 @@ public class AuthSelectionPage {
     @Step("Press login with email")
     public EmailLoginPage pressEmailLogin() {
         emailLoginButton.click();
-        return getEmailLoginPage();
-    }
-
-    private EmailLoginPage getEmailLoginPage() {
-        return requireNonNullElseGet(emailLoginPage, EmailLoginPage::new);
+        return emailLoginPage;
     }
 }
