@@ -27,6 +27,7 @@ class SearchTests extends AndroidTestBase {
                 .pressAlreadyRegistered()
                 .pressEmailLogin()
                 .LoginWith(App.config.login(), App.config.password());
+        myBooksPage.waitFullyLoaded();
         mainBarPage.openLibrary();
     }
 
