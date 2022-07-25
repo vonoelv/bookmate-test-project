@@ -159,7 +159,9 @@ platformVersion=
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-browser_selenoid.properties -->
     ```properties
     remoteDriver=https://selenoid.autotests.cloud/wd/hub
+    baseUrl=https://bookmate.com
     browser=chrome
+    browserSize=1920x1080
     user=${selenoid_user_sys_prop}
     key=${selenoid_key_sys_prop}
     deviceName=
@@ -175,7 +177,9 @@ platformVersion=
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-browser_local.properties -->
     ```properties
     remoteDriver=
+    baseUrl=https://bookmate.com
     browser=chrome
+    browserSize=1920x1080
     user=
     key=
     deviceName=
