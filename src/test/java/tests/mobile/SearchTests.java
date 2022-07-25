@@ -1,10 +1,7 @@
 package tests.mobile;
 
 import config.App;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -23,10 +20,13 @@ class SearchTests extends AndroidTestBase {
     public void beforeEach() {
         super.beforeEach();
         welcomePage
-                .waitPageLoading()
-                .pressAlreadyRegistered()
-                .pressEmailLogin()
-                .LoginWith(App.config.login(), App.config.password());
+                .pressCloseButton()
+                .selectTopic("Personal Growth")
+                .selectTopic("Science Fiction")
+                .pressContinueButton()
+                .selectBook(0)
+                .selectBook(1)
+                .pressContinueButton();
         myBooksPage.waitFullyLoaded();
         mainBarPage.openLibrary();
     }
@@ -34,15 +34,15 @@ class SearchTests extends AndroidTestBase {
     @CsvSource(value = {
             "Books | Rikki-Tikki-Tavi",
             "Audiobooks | Side Effects",
-            "Comics | The Story of Verona",
-            "Series | A Riley Paige Mystery",
-            "Authors | E. M Remarque",
-            "Shelves | 24 Free Vintage Sci-Fi"
+            "Comics | The Story of Verona"
     }, delimiter = '|')
 
     @ParameterizedTest(name = "{arguments}")
-    @DisplayName("An existing book can be found")
-    void checkSearchForBook(String itemType, String itemName) {
+    @DisplayName("An existing item can be found with filter:")
+    void checkSearchWithFilter(String itemType, String itemName) {
+        Allure.getLifecycle().updateTestCase(test ->
+                test.setName("An existing item can be found with filter: [Filter, Search text]"));
+
         libraryPage
                 .pressSearch()
                 .enterSearchText(itemName)
