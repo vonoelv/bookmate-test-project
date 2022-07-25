@@ -21,7 +21,7 @@
     + [Start a run of custom set of tests](#AllureTestOpsStartTests)
     + [Dashboards](#Dashboards)
     + [Defects](#Defects)
-+ [Github webhooks](#GithubWebhooks)
++ [GitHub webhooks](#GithubWebhooks)
 + [Tests](#Tests)
 + [Jira integration](#Jira)
 + [Video of running tests](#Video)
@@ -47,7 +47,7 @@ A brief list of interesting facts about the project:
 - [x] Parallel execution
 
 
-# <a name="Technology">Tools and technologies</a>
+# <a name="Technology">Tools and a technologies</a>
 <p  align="center">
   <code><img width="5%" title="IntelliJ IDEA" src="./images/icons/IDEA-logo.svg"></code>
   <code><img width="5%" title="Java" src="./images/icons/java-logo.svg"></code>
@@ -381,12 +381,12 @@ As soon as the Jenkins job is done, corresponding tests get their statuses. A te
   <img src="images/screens/AllureTestOpsFinishedRunClickStop.png" alt="AllureTestOpsFinishedRunClickStop" width="1250">
 </p>
 
-> After that all these test-cases(names, steps, tags etc) will be updated according to the recent code changes.
+> After that all these test-cases(names, steps, tags etc.) will be updated according to the recent code changes.
 
 [Back to the table of contents ⬆](#TableOfContents)
 
 ## <a name="Dashboards">Dashboards</a>
-Automation trends charts, distribution tests by some different parameters etc:
+Automation trends charts, distribution tests by some different parameters etc.:
 <p align="center">
   <img src="images/screens/AllureTestOpsDashboardsOverview.png" alt="AllureTestOpsDashboardsOverview" width="1050">
 </p>
@@ -414,7 +414,7 @@ Knows defects are automatically recognized by defined patterns for test fails in
 [Back to the table of contents ⬆](#TableOfContents)
 
 
-# <a name="GithubWebhooks">Github webhooks</a>
+# <a name="GithubWebhooks">GitHub webhooks</a>
 Each push to the repository triggers 3 builds in Jenkins:
 ```bash
 gradle clean test -Dtag=API
