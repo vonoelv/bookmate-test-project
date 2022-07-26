@@ -14,7 +14,7 @@
     + [Property files](#PropertyFiles)
       + [Default property files](#PropertyFilesDefaults)
     + [Running tests in Jenkins](#RunInJenkins)
-+ [Notifications in Telegram about results](#TelegramNotifications)
++ [Telegram Notifications](#TelegramNotifications)
 + [Test results report in Allure Report](#AllureReport)
 + [Allure TestOps integration](#AllureTestOps)
     + [Project in Allure TestOps](#AllureTestOpsProject)
@@ -290,7 +290,7 @@ After the build is done the test results are available in:
 [Back to the table of contents ⬆](#TableOfContents)
 
 
-# <a name="TelegramNotifications">Notifications in Telegram about results</a>
+# <a name="TelegramNotifications">Telegram Notifications</a>
 Telegram bot sends a brief report to a specified telegram chat by results of each build.
 <p  align="center">
 <img src="images/screens/TelegramNotification.png" alt="TelegramNotification" width="550">
