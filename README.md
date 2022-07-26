@@ -272,7 +272,6 @@ A parametrized Jenkins job can be launched with needed ***tag*** and ***runIn***
 </p>
 
 `project-{runIn}.properties` config files are created in the build workspace on start build.\
-As soon as the build is done the workspace is deleted.
 
 Sensitive information(login names and passwords) is stored in an encrypted form in Jenkins credential storage.\
 And relatively safe transferred to the build by gradle arguments(see [Gradle command](#GradleCommand) section, 'Additional parameters') and it's values masked in the logs.
