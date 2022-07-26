@@ -164,8 +164,6 @@ platformVersion=
     browserSize=1920x1080
     user=${selenoid_user_sys_prop}
     key=${selenoid_key_sys_prop}
-    deviceName=
-    platformVersion=
     ```
     <!-- MARKDOWN-AUTO-DOCS:END -->
   
@@ -176,14 +174,9 @@ platformVersion=
     <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-browser_local.properties) -->
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-browser_local.properties -->
     ```properties
-    remoteDriver=
     baseUrl=https://bookmate.com
     browser=chrome
     browserSize=1920x1080
-    user=
-    key=
-    deviceName=
-    platformVersion=
     ```
     <!-- MARKDOWN-AUTO-DOCS:END -->
 
@@ -201,8 +194,6 @@ platformVersion=
     <!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./src/test/resources/config/project-android_browserstack.properties) -->
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_browserstack.properties -->
     ```properties
-    remoteDriver=
-    browser=
     user=${browserstack_user_sys_prop}
     key=${browserstack_key_sys_prop}
     deviceName=Samsung Galaxy S22 Ultra
@@ -218,9 +209,6 @@ platformVersion=
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_emulator.properties -->
     ```properties
     remoteDriver=http://localhost:4723/wd/hub
-    browser=
-    user=
-    key=
     deviceName=Pixel_4_API_30
     platformVersion=11.0
     ```
@@ -234,9 +222,6 @@ platformVersion=
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_real.properties -->
     ```properties
     remoteDriver=http://localhost:4723/wd/hub
-    browser=
-    user=
-    key=
     deviceName=5200aecd4956a489
     platformVersion=8.0
     ```
@@ -250,7 +235,6 @@ platformVersion=
     <!-- The below code snippet is automatically added from ./src/test/resources/config/project-android_selenoid.properties -->
     ```properties
     remoteDriver=https://selenoid.autotests.cloud/wd/hub
-    browser=
     user=${selenoid_user_sys_prop}
     key=${selenoid_key_sys_prop}
     deviceName=android
