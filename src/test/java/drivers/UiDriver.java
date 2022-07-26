@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static config.Project.isRemoteDriver;
 import static java.lang.String.format;
 
-public class WebUiDriver {
+public class UiDriver {
 
     public static void configure() {
         Configuration.browserSize = Project.config.browserSize();

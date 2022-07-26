@@ -1,4 +1,4 @@
-package tests.webui;
+package tests.ui;
 
 import config.App;
 import io.qameta.allure.Epic;
@@ -9,16 +9,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.webui.pages.LoginPage;
-import tests.webui.pages.SettingsPage;
+import tests.ui.pages.LoginPage;
+import tests.ui.pages.SettingsPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("WebUI")
-@Epic("WebUI")
+@Tag("UI")
+@Epic("UI")
 @Feature("Login")
 @Owner("vonoelv")
-class LoginTests extends WebUiTestBase {
+class LoginTests extends UiTestBase {
 
     public static final SettingsPage settingsPage = new SettingsPage();
     public static final LoginPage loginPage = new LoginPage();

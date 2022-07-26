@@ -1,4 +1,4 @@
-package tests.webui;
+package tests.ui;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,11 +9,11 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("WebUI")
-@Epic("WebUI")
+@Tag("UI")
+@Epic("UI")
 @Feature("Search")
 @Owner("vonoelv")
-class SearchTests extends WebUiTestBase {
+class SearchTests extends UiTestBase {
 
     @BeforeEach
     @Override

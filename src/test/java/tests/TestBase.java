@@ -5,7 +5,7 @@ import config.Project;
 import drivers.BrowserstackAndroidDriver;
 import drivers.LocalAndroidDriver;
 import drivers.SelenoidAndroidDriver;
-import drivers.WebUiDriver;
+import drivers.UiDriver;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +29,7 @@ public class TestBase {
         switch (Project.config.runIn()) {
             case "browser_selenoid":
             case "browser_local":
-                WebUiDriver.configure();
+                UiDriver.configure();
                 break;
             case "android_selenoid":
                 Configuration.browser = SelenoidAndroidDriver.class.getName();

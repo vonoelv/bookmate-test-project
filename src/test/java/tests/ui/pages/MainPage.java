@@ -1,9 +1,9 @@
-package tests.webui.pages;
+package tests.ui.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import tests.webui.domain.HeaderTab;
+import tests.ui.domain.HeaderTab;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
