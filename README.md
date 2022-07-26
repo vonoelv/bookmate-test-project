@@ -13,7 +13,7 @@
     + [Gradle command](#GradleCommand)
     + [Property files](#PropertyFiles)
       + [Default property files](#PropertyFilesDefaults)
-    + [Running tests in Jenkins](#RunInJenkins)
+    + [Run in Jenkins](#RunInJenkins)
 + [Telegram Notifications](#TelegramNotifications)
 + [Test results report in Allure Report](#AllureReport)
 + [Allure TestOps integration](#AllureTestOps)
@@ -80,7 +80,9 @@ The autotests in this project are written in `Java` using `Selenide` framework.\
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="GradleCommand">Gradle command</a>
+# <a name="HowToRun">How to run</a>
+
+## <a name="GradleCommand">Gradle command</a>
 To run locally and in Jenkins the following command is used:
 ```bash
 gradle clean test -Dtag=<tag> -DrunIn=<runIn>
@@ -125,7 +127,7 @@ D --> J[android_selenoid]
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="PropertyFiles">Property files</a>
+## <a name="PropertyFiles">Property files</a>
 Possible properties in a `project-${runIn}.properties` file:
 ```properties
 remoteDriver=
@@ -149,7 +151,7 @@ platformVersion=
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-## <a name="PropertyFilesDefaults">Default property files</a>
+### <a name="PropertyFilesDefaults">Default property files</a>
 > The section below is automatically updated from content of src/test/resources/config/ directory. 
 
 <details>
@@ -251,7 +253,7 @@ platformVersion=
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="RunConfigurationsInIDEA">Run configurations in IDEA</a>
+## <a name="RunConfigurationsInIDEA">Run configurations in IDEA</a>
 For convenience of running tests, IDEA run configurations are committed to this project
 <p  align="center">
 <img src="images/screens/IDEARunConfigurations1.png" alt="IDEARunConfigurations1" width="550">
@@ -263,7 +265,7 @@ For convenience of running tests, IDEA run configurations are committed to this 
 
 [Back to the table of contents ⬆](#TableOfContents)
 
-# <a name="RunInJenkins">Running tests in [Jenkins](https://jenkins.autotests.cloud/job/C12-vyach_son-bookmate_test/)</a>
+## <a name="RunInJenkins">Run in [Jenkins](https://jenkins.autotests.cloud/job/C12-vyach_son-bookmate_test/)</a>
 Main page of the build:
 <p  align="center">
 <img src="images/screens/JenkinsBuildMainPage.png" alt="JenkinsBuildMainPage" width="950">
