@@ -35,13 +35,15 @@ class HeaderTests extends WebUiTestBase {
                 .checkPageIsOpen(Project.config.baseUrl() + "/");
     }
 
-    @Test
-    @DisplayName("Ability to switch to each header tab")
-    void checkHeaderTabsOpening() {
-        for (HeaderTab headerTab : HeaderTab.values()) {
-            mainPage.openHeaderTab(headerTab)
-                    .checkPageIsOpen(headerTab.url);
-        }
+    @ParameterizedTest(name = "{arguments}")
+    @EnumSource(HeaderTab.class)
+    @DisplayName("Ability to switch to each header tab:")
+    void checkHeaderTabsOpening(HeaderTab headerTab) {
+        Allure.getLifecycle().updateTestCase(test ->
+                test.setName("Ability to switch to each header tab: [Header]"));
+
+        mainPage.openHeaderTab(headerTab)
+                .checkPageIsOpen(headerTab.url);
     }
 
     @Test
