@@ -2,14 +2,13 @@ package tests.webui;
 
 
 import config.Project;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import tests.webui.domain.HeaderTab;
 import tests.webui.domain.Language;
 
@@ -59,15 +58,18 @@ class HeaderTests extends WebUiTestBase {
                 .checkLoginPageIsVisible();
     }
 
-    @Test
-    @DisplayName("Ability to switch to each language")
-    void checkLanguageSwitching() {
-        for (Language language : Language.values()) {
-            mainPage.selectLanguage(language.langNative);
-            if (!language.langNative.equals("English")) {
-                mainPage.acceptCookies();
-            }
-            mainPage.checkPageIsOpen(language.url);
+
+    @ParameterizedTest(name = "{arguments}")
+    @EnumSource(Language.class)
+    @DisplayName("Ability to switch to each language:")
+    void checkLanguageSwitching(Language language) {
+        Allure.getLifecycle().updateTestCase(test ->
+                test.setName("Ability to switch to each language: [Language]"));
+
+        mainPage.selectLanguage(language.langNative);
+        if (!language.langNative.equals("English")) {
+            mainPage.acceptCookies();
         }
+        mainPage.checkPageIsOpen(language.url);
     }
 }
