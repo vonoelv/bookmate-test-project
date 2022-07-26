@@ -22,7 +22,6 @@
     + [Dashboards](#Dashboards)
     + [Defects](#Defects)
 + [GitHub webhooks](#GithubWebhooks)
-+ [Tests](#Tests)
 + [Jira integration](#Jira)
 + [Video of running tests](#Video)
 
@@ -433,12 +432,6 @@ This way we can find problems earlier and always have actual state of test-cases
 <p align="center">
   <img src="images/screens/JiraIntegration.png" alt="JiraIntegration" width="1050">
 </p>
-
-[Back to the table of contents ⬆](#TableOfContents)
-
-
-# <a name="Tests">Tests</a>
-## Checks
 
 [Back to the table of contents ⬆](#TableOfContents)
 
