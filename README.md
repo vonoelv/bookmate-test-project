@@ -340,7 +340,7 @@ so there is no need in complex process of synchronization manual test-cases and 
 It is enough to create and update an autotest in the code and the test-case in TMS always will be in actual state.\
 Manual test-cases also can be added in TMS in case of need(via web interface or via code).
 <p align="center">
-  <img src="images/screens/AllureTestOpsTests.png" alt="AllureTestOpsTests" width="1050">
+  <img src="images/screens/AllureTestOpsTests.gif" alt="AllureTestOpsTests" width="1050">
 </p>
 
 ```mermaid
