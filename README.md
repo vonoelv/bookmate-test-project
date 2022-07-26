@@ -439,10 +439,11 @@ This way we can find problems earlier and always have actual state of test-cases
 # <a name="Video">Video of running tests</a>
 
 
+https://user-images.githubusercontent.com/103368614/181073019-19e5e4f2-f28e-4c67-a2f5-d5e209951d77.mp4
+
+
 https://user-images.githubusercontent.com/103368614/181072201-6a35966f-f7b4-4fac-9319-10d34b07b90a.mp4
 
-
-https://user-images.githubusercontent.com/103368614/179863761-a42a6c4f-b7ff-48eb-b35e-e454baabb0f4.mp4
 
 
 
