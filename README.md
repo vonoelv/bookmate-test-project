@@ -127,10 +127,12 @@ D --> J[android_selenoid]
 [Back to the table of contents ⬆](#TableOfContents)
 
 # <a name="PropertyFiles">Property files</a>
-Structure of `project-${runIn}.properties` file:
+Possible properties in a `project-${runIn}.properties` file:
 ```properties
 remoteDriver=
+baseUrl=
 browser=
+browserSize=
 user=
 key=
 deviceName=
@@ -138,7 +140,9 @@ platformVersion=
 ```
 
 >- *remoteDriver* - URL for remote WebDriver
->- *browser* - browser for running WebUI tests
+>- *baseUrl* - base URL for WebUI tests
+>- *browser* - browser for WebUI tests
+>- *browserSize* - size of browser for running WebUI tests
 >- *user* - login for authorization. By default, it's ```${browserstack_user_sys_prop}``` or ```${selenide_user_sys_prop}```, that is it comes from system properties
 >- *key* - key/password for authorization. By default, it's ```${browserstack_key_sys_prop}``` or ```${selenide_key_sys_prop}```, that is it comes from system properties
 >- *deviceName* - android device name or serial number
