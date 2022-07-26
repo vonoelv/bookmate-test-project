@@ -60,7 +60,6 @@ class HeaderTests extends WebUiTestBase {
                 .checkLoginPageIsVisible();
     }
 
-
     @ParameterizedTest(name = "{arguments}")
     @EnumSource(Language.class)
     @DisplayName("Ability to switch to each language:")
