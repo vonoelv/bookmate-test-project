@@ -47,6 +47,6 @@ public class Project {
     }
 
     public static boolean isRemoteDriver() {
-        return !config.remoteDriver().isEmpty();
+        return !(config.remoteDriver() == null) && !config.remoteDriver().isEmpty();
     }
 }
