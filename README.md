@@ -91,7 +91,7 @@ Additional parameters:
 > `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
 > `-Dthreads=number_of_threads` can be added for parallel tests execution
 
-`tag` - defines a tag for running specific tests:
+`tag` - tests with this tag will be executed:
 >- *API*
 >- *UI*
 >- *Android*
