@@ -1,4 +1,4 @@
-package tests.ui.pages;
+package tests.web.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;

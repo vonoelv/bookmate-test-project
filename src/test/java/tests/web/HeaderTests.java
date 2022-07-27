@@ -1,4 +1,4 @@
-package tests.ui;
+package tests.web;
 
 
 import config.Project;
@@ -9,16 +9,16 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import tests.ui.domain.HeaderTab;
-import tests.ui.domain.Language;
+import tests.web.domain.HeaderTab;
+import tests.web.domain.Language;
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("UI")
-@Epic("UI")
+@Tag("Web")
+@Epic("Web")
 @Feature("Header")
 @Owner("vonoelv")
-class HeaderTests extends UiTestBase {
+class HeaderTests extends WebTestBase {
 
     @BeforeEach
     @Override

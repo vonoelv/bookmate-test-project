@@ -1,4 +1,4 @@
-package tests.ui.domain;
+package tests.web.domain;
 
 import config.Project;
 

@@ -1,10 +1,10 @@
-package tests.ui;
+package tests.web;
 
 import tests.TestBase;
-import tests.ui.pages.MainPage;
-import tests.ui.pages.SearchPage;
+import tests.web.pages.MainPage;
+import tests.web.pages.SearchPage;
 
-public class UiTestBase extends TestBase {
+public class WebTestBase extends TestBase {
     public static final MainPage mainPage = new MainPage();
     public static final SearchPage searchPage = new SearchPage();
 }

@@ -1,4 +1,4 @@
-package tests.ui;
+package tests.web;
 
 import config.App;
 import io.qameta.allure.Epic;
@@ -9,16 +9,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.ui.pages.LoginPage;
-import tests.ui.pages.SettingsPage;
+import tests.web.pages.LoginPage;
+import tests.web.pages.SettingsPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("UI")
-@Epic("UI")
+@Tag("Web")
+@Epic("Web")
 @Feature("Login")
 @Owner("vonoelv")
-class LoginTests extends UiTestBase {
+class LoginTests extends WebTestBase {
 
     public static final SettingsPage settingsPage = new SettingsPage();
     public static final LoginPage loginPage = new LoginPage();
@@ -32,7 +32,7 @@ class LoginTests extends UiTestBase {
 
     @Test
     @Story("Login by email")
-    @DisplayName("Successful login through UI")
+    @DisplayName("Successful login")
     void checkLogin() {
         mainPage
                 .login(App.config.login(), App.config.password())
@@ -42,7 +42,7 @@ class LoginTests extends UiTestBase {
 
     @Test
     @Story("Login by email")
-    @DisplayName("Unsuccessful login through UI - incorrect password")
+    @DisplayName("Unsuccessful login - incorrect password")
     void checkLoginWithWrongPassword() {
         mainPage.login(App.config.login(), App.config.password() + "12345");
         loginPage.checkLoginFormError("Incorrect username or password");
