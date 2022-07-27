@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id "io.qameta.allure" version "2.9.6"
+    id "io.freefair.lombok" version "6.5.0.3"
 }
 
 repositories {
@@ -29,9 +30,6 @@ allure {
 }
 
 dependencies {
-    testCompileOnly 'org.projectlombok:lombok:1.18.22'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
-
     testImplementation(
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "com.codeborne:selenide:$selenideVersion",
@@ -43,12 +41,8 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.aspectj:aspectjweaver:1.9.6",
-            "com.github.javafaker:javafaker:1.0.2")
-
-    testRuntimeOnly(
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
-    )
+            "com.github.javafaker:javafaker:1.0.2",
+            "org.slf4j:slf4j-simple:$slf4jVersion")
 }
 
 tasks.withType(JavaCompile) {
@@ -58,7 +52,9 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        if (System.getProperty("tag") != null && !System.getProperty("tag").toString().isEmpty()) includeTags System.getProperty("tag").toString()
+        if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
+            includeTags System.getProperty("tag")
+        }
     }
 
     if (System.getProperty("threads") != null) {
