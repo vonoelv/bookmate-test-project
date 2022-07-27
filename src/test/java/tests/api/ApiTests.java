@@ -24,8 +24,10 @@ class ApiTests {
     @AfterAll
     static void cleanUp() {
         ApiSteps apiSteps = new ApiSteps();
-        apiSteps.getAllBookshelves().forEach((bookshelf) -> apiSteps.deleteBookshelf(bookshelf.getUuid()));
-        apiSteps.getAllBooks().forEach((book) -> apiSteps.removeBookFromLibrary(book.getUsersLibraryCard().getUuid()));
+        apiSteps.getAllBookshelves().forEach((bookshelf) ->
+                apiSteps.deleteBookshelf(bookshelf.getUuid()));
+        apiSteps.getAllBooks().forEach((book) ->
+                apiSteps.removeBookFromLibrary(book.getUsersLibraryCard().getUuid()));
     }
 
     @Test
