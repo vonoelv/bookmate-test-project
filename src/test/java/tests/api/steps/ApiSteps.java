@@ -226,7 +226,8 @@ public class ApiSteps {
     }
 
     @Step("Verify annotation, uuids of the book and the bookshelf in the response")
-    public void checkAddBookOnBookshelfResponseParameters(BookshelfPost bookshelfPost, String annotation, String bookUuid, String bookshelfUuid) {
+    public void checkAddBookOnBookshelfResponseParameters(BookshelfPost bookshelfPost, String annotation,
+                                                          String bookUuid, String bookshelfUuid) {
         assertThat(bookshelfPost.getAnnotation()).isEqualTo(annotation);
         assertThat(bookshelfPost.getResource().getUuid()).isEqualTo(bookUuid);
         assertThat(bookshelfPost.getBookshelf().getUuid()).isEqualTo(bookshelfUuid);

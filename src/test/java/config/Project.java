@@ -10,6 +10,22 @@ public class Project {
 
     static {
         System.out.println(System.getProperties());
+        if ("API".equals(System.getProperty("tag"))) {
+            validateProperty(config.apiBaseUrl(), "apiBaseUrl");
+        } else {
+            validateEnvDependentProperties();
+        }
+        System.out.println("CONFIG:");
+        System.out.println(config.runIn());
+        System.out.println(config.remoteDriver());
+        System.out.println(config.browser());
+        System.out.println(config.user());
+        System.out.println(config.key());
+        System.out.println(config.deviceName());
+        System.out.println(config.platformVersion());
+    }
+
+    private static void validateEnvDependentProperties() {
         validateProperty(config.runIn(), "runIn");
         switch (config.runIn()) {
             case "browser_selenoid":
@@ -32,14 +48,6 @@ public class Project {
             default:
                 throw new IllegalStateException("Unexpected 'runIn' value: " + config);
         }
-        System.out.println("CONFIG:");
-        System.out.println(config.runIn());
-        System.out.println(config.remoteDriver());
-        System.out.println(config.browser());
-        System.out.println(config.user());
-        System.out.println(config.key());
-        System.out.println(config.deviceName());
-        System.out.println(config.platformVersion());
     }
 
     public static void validateProperty(String propertyValue, String propertyName) {

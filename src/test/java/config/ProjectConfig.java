@@ -17,5 +17,6 @@ public interface ProjectConfig extends Config {
     String key();
     String deviceName();
     String platformVersion();
+    String apiBaseUrl();
 }
 

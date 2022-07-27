@@ -1,6 +1,7 @@
 package tests.api.specs;
 
 import config.App;
+import config.Project;
 import helpers.CustomAllureListener;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -15,7 +16,7 @@ public class Specs {
     public static RequestSpecification request = with()
             .filter(CustomAllureListener.withCustomTemplates())
             .log().all()
-            .baseUri("https://bookmate.com/p/api/v5")
+            .baseUri(Project.config.apiBaseUrl())
             .contentType(JSON)
             .header("x-csrf-token", App.config.xCsrfToken())
             .cookie("_csrf", App.config.csrf())
