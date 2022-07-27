@@ -27,7 +27,7 @@
 
 
 # <a name="Description">Description</a>
-The test project consists of UI, API and mobile(android) tests.\
+The test project consists of Web, API and mobile(android) tests.\
 A brief list of interesting facts about the project:
 - [x] `Page Object` with steps using `Chain of Invocations`
 - [x] Fake data generating with `Faker` library
@@ -94,7 +94,7 @@ Additional parameters:
 
 `tag` - tests with this tag will be executed:
 >- *API*
->- *UI*
+>- *Web*
 >- *Android*
  
 `runIn` - defines an environment for running these tests:
@@ -115,7 +115,7 @@ Valid combinations:
 ```mermaid
 graph LR
 A[tag] --> B[API]
-A --> C[UI]
+A --> C[Web]
 A --> D[Android]
 C --> E[browser_selenoid]
 C --> F[browser_local]
@@ -141,9 +141,9 @@ platformVersion=
 ```
 
 >- *remoteDriver* - URL for remote WebDriver
->- *baseUrl* - base URL for UI tests
->- *browser* - browser for UI tests
->- *browserSize* - size of browser for running UI tests
+>- *baseUrl* - base URL for Web tests
+>- *browser* - browser for Web tests
+>- *browserSize* - size of browser for Web tests
 >- *user* - login for authorization. By default, it's ```${browserstack_user_sys_prop}``` or ```${selenide_user_sys_prop}```, that is it comes from system properties
 >- *key* - key/password for authorization. By default, it's ```${browserstack_key_sys_prop}``` or ```${selenide_key_sys_prop}```, that is it comes from system properties
 >- *deviceName* - android device name or serial number
@@ -155,7 +155,7 @@ platformVersion=
 > The section below is automatically updated from content of src/test/resources/config/ directory. 
 
 <details>
-    <summary><h4>UI</h4></summary>
+    <summary><h4>Web</h4></summary>
 
 * <details>
     <summary><h4>project-browser_selenoid.properties</h4></summary>
@@ -412,7 +412,7 @@ Each push to the repository triggers 3 builds in Jenkins:
 gradle clean test -Dtag=API
 ```
 ```bash
-gradle clean test -Dtag=UI -DrunIn=browser_selenoid
+gradle clean test -Dtag=Web -DrunIn=browser_selenoid
 ```
 ```bash
 gradle clean test -Dtag=Android -DrunIn=android_browserstack
