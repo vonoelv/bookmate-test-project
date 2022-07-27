@@ -3,20 +3,21 @@ package tests.web.domain;
 import config.Project;
 
 public enum Language {
-    ENGLISH("English", Project.config.baseUrl() + "/"),
-    RUSSIAN("Русский", Project.config.baseUrl().replace("//", "//ru.") + "/"),
-    SPANISH("Español", Project.config.baseUrl().replace("//", "//es.") + "/"),
-    DUTCH("Dansk", Project.config.baseUrl().replace("//", "//da.") + "/"),
-    TURKISH("Türkçe", Project.config.baseUrl().replace("//", "//tr.") + "/"),
-    BAHASA_INDONESIA("Bahasa Indonesia", Project.config.baseUrl().replace("//", "//id.") + "/"),
-    SWEDISH("Svenska", Project.config.baseUrl().replace("//", "//sv.") + "/"),
-    AZERBAIJANI("Azərbaycanca", Project.config.baseUrl().replace("//", "//az.") + "/");
+    ENGLISH("English", ""),
+    RUSSIAN("Русский", "ru."),
+    SPANISH("Español", "es."),
+    DUTCH("Dansk", "da."),
+    TURKISH("Türkçe", "tr."),
+    BAHASA_INDONESIA("Bahasa Indonesia", "id."),
+    SWEDISH("Svenska", "sv."),
+    AZERBAIJANI("Azərbaycanca", "az.");
 
     public final String langNative;
-    public final String url;
+    public final String languageDomain;
 
-    Language(String langNative, String url) {
+    Language(String langNative, String languageDomain) {
+        String baseUrlWithoutProtocolPrefix = Project.config.baseUrl().replace("https://", "");
         this.langNative = langNative;
-        this.url = url;
+        this.languageDomain = "https://" + languageDomain + baseUrlWithoutProtocolPrefix + "/";
     }
 }

@@ -71,6 +71,6 @@ class HeaderTests extends WebTestBase {
         if (!language.langNative.equals("English")) {
             mainPage.acceptCookies();
         }
-        mainPage.checkPageIsOpen(language.url);
+        mainPage.checkPageIsOpen(language.languageDomain);
     }
 }
