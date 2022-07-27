@@ -1,28 +1,23 @@
 package config;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Project {
 
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class);
+    private static final Logger logger = LoggerFactory.getLogger(Project.class);
 
     static {
-        System.out.println(System.getProperties());
         if ("API".equals(System.getProperty("tag"))) {
             validateProperty(config.apiBaseUrl(), "apiBaseUrl");
         } else {
             validateEnvDependentProperties();
         }
-        System.out.println("CONFIG:");
-        System.out.println(config.runIn());
-        System.out.println(config.remoteDriver());
-        System.out.println(config.browser());
-        System.out.println(config.user());
-        System.out.println(config.key());
-        System.out.println(config.deviceName());
-        System.out.println(config.platformVersion());
+        logger.info(config.toString());
     }
 
     private static void validateEnvDependentProperties() {
@@ -51,7 +46,9 @@ public class Project {
     }
 
     public static void validateProperty(String propertyValue, String propertyName) {
-        assertThat(propertyValue).withFailMessage("'%s' value is null or empty", propertyName).isNotEmpty();
+        assertThat(propertyValue)
+                .withFailMessage("'%s' value is null or empty", propertyName)
+                .isNotEmpty();
     }
 
     public static boolean isRemoteDriver() {

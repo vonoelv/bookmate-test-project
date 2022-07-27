@@ -2,10 +2,13 @@ package drivers;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverProvider;
+import config.Project;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.CheckReturnValue;
 import javax.annotation.Nonnull;
@@ -24,12 +27,12 @@ public class BrowserstackAndroidDriver implements WebDriverProvider {
     private static final String endpointForApkUpload = "https://%s:%s@api-cloud.browserstack.com/app-automate/upload";
     private static final String UPLOADED_APK_URL = uploadAPK();
     private static final String remoteDriver = "http://hub.browserstack.com/wd/hub";
+    private static final Logger logger = LoggerFactory.getLogger(Project.class);
 
     @Override
     @CheckReturnValue
     @Nonnull
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
-        System.out.println("Creating driver...");
         Configuration.browserSize = null;
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
@@ -55,7 +58,7 @@ public class BrowserstackAndroidDriver implements WebDriverProvider {
 
     @Nonnull
     private static String uploadAPK() {
-        System.out.println("APK uploading...");
+        logger.info("APK uploading to browserstack...");
         return given()
                 .multiPart("file", new File("src/test/resources/apk/Bookmate_8.0.3.apk"))
                 .when()
