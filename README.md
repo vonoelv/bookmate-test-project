@@ -90,7 +90,8 @@ gradle clean test -Dtag=<tag> -DrunIn=<runIn>
 Additional parameters:
 > `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - credentials for selenoid\
 > `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - credentials for browserstack\
-> `-Dthreads=number_of_threads` can be added for parallel tests execution
+> `-Dthreads=number_of_threads` can be added for parallel tests execution\
+> `-DapiBaseUrl=url` can be added to set a base url for API tests
 
 `tag` - tests with this tag will be executed:
 >- *API*
