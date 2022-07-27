@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
+    <list default="true" id="14f3485b-8ee5-45fb-8dc3-c1081eb7fa15" name="Changes" comment="extracted apiBaseUrl to System Properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_browserstack.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-android_selenoid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/project-browser_selenoid.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +74,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Ekam API Test" />
+        <option value="Ekam RETROFIT Client" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -96,37 +96,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/bookmate-test-project/images/screens&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "C:/IdeaProjects/bookmate-test-project/images/screens",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Markdown&quot;,
-      &quot;TEXT&quot;,
-      &quot;JSON&quot;,
-      &quot;Shell Script&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA",
+      "Markdown",
+      "TEXT",
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="tests.mobile.enums" />
       <recent name="tests.api.models.bookshelfs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\IdeaProjects\bookmate-test-project\images\screens" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\images\video" />
+      <recent name="C:\IdeaProjects\bookmate-test-project\.github\workflows" />
       <recent name="C:\IdeaProjects\bookmate-test-project\src\test\resources" />
       <recent name="C:\IdeaProjects\bookmate-test-project\src\test\resources\config" />
-      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\java\drivers" />
-      <recent name="C:\IdeaProjects\bookmate-test-project\src\test\java\helpers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\IdeaProjects\bookmate-test-project\images\icons" />
@@ -137,13 +138,13 @@
       <recent name="tests.api.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Android-selenoid">
+  <component name="RunManager" selected="Gradle.API">
     <configuration name="API" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=API" />
+        <option name="scriptParameters" value="-Dtag=API -DapiBaseUrl='https://bookmate.com/p/api/v5'" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -253,12 +254,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WebUI-local" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="Web-local" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_local" />
+        <option name="scriptParameters" value="-Dtag=Web -DrunIn=browser_local" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -276,12 +277,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WebUI-selenoid" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="Web-selenoid" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-Dtag=WebUI -DrunIn=browser_selenoid -Dselenoid_user_sys_prop=enter_user -Dselenoid_key_sys_prop=enter_key" />
+        <option name="scriptParameters" value="-Dtag=Web -DrunIn=browser_selenoid -Dselenoid_user_sys_prop=enter_user -Dselenoid_key_sys_prop=enter_key" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -301,8 +302,8 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.API" />
-      <item itemvalue="Gradle.WebUI-local" />
-      <item itemvalue="Gradle.WebUI-selenoid" />
+      <item itemvalue="Gradle.Web-local" />
+      <item itemvalue="Gradle.Web-selenoid" />
       <item itemvalue="Gradle.Android-browserstack" />
       <item itemvalue="Gradle.Android-emulator" />
       <item itemvalue="Gradle.Android-real" />
@@ -321,330 +322,362 @@
       <option name="presentableId" value="Default" />
       <updated>1657020930182</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <created>1657742700681</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00089" summary="added header tests">
+      <created>1658352997750</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1657742700681</updated>
+      <updated>1658352997750</updated>
     </task>
-    <task id="LOCAL-00002" summary="removed switching to lower case">
-      <created>1657742871926</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00090" summary="updated readme">
+      <created>1658358938880</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1657742871926</updated>
+      <updated>1658358938880</updated>
     </task>
-    <task id="LOCAL-00003" summary="removed Location class">
-      <created>1657743064494</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00091" summary="updated readme">
+      <created>1658359190561</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
-      <updated>1657743064494</updated>
+      <updated>1658359190561</updated>
     </task>
-    <task id="LOCAL-00004" summary="added android real config">
-      <created>1657793284486</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00092" summary="introduced App-related config, ApiSteps refactoring">
+      <created>1658413541584</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
-      <updated>1657793284486</updated>
+      <updated>1658413541584</updated>
     </task>
-    <task id="LOCAL-00005" summary="extracted CDP-related actions to Cdt helper class and removed auto-switching to English site version">
-      <created>1657795501924</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00093" summary="using Faker, rearranged models, added paging support for api requests, cleanup for API test, updated readme">
+      <created>1658488358408</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
-      <updated>1657795501924</updated>
+      <updated>1658488358408</updated>
     </task>
-    <task id="LOCAL-00006" summary="added missed android real config">
-      <created>1657795722460</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00094" summary="fixed getting properties for API tests, fixed faker">
+      <created>1658488796863</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
       <option name="project" value="LOCAL" />
-      <updated>1657795722460</updated>
+      <updated>1658488796863</updated>
     </task>
-    <task id="LOCAL-00007" summary="changed WebUiDriver, fixed support browser options">
-      <created>1657895497685</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00095" summary="added api test, rearranged/refactored models">
+      <created>1658505390044</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
-      <updated>1657895497685</updated>
+      <updated>1658505390044</updated>
     </task>
-    <task id="LOCAL-00008" summary="removed Cdp helper as not used">
-      <created>1657896446292</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00096" summary="added api tests, some modeles refactoring">
+      <created>1658517856986</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
-      <updated>1657896446292</updated>
+      <updated>1658517856987</updated>
     </task>
-    <task id="LOCAL-00009" summary="some cleaning">
-      <created>1657897053122</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
+    <task id="LOCAL-00097" summary="fixed incorrect browserSize for non-mobile drivers">
+      <created>1658519910996</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
-      <updated>1657897053122</updated>
+      <updated>1658519910996</updated>
     </task>
-    <task id="LOCAL-00010" summary="added bookmate icon">
-      <created>1657900261579</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
+    <task id="LOCAL-00098" summary="refactored TestBase">
+      <created>1658593921886</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
       <option name="project" value="LOCAL" />
-      <updated>1657900261579</updated>
+      <updated>1658593921887</updated>
     </task>
-    <task id="LOCAL-00011" summary="config refactoring- tools renamed to runIn and extracted to cmd argument, added browserstack link">
-      <created>1658006653637</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+    <task id="LOCAL-00099" summary="refactored mobile tests">
+      <created>1658741983943</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
-      <updated>1658006653637</updated>
+      <updated>1658741983943</updated>
     </task>
-    <task id="LOCAL-00012" summary="configs fix">
-      <created>1658008512474</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
+    <task id="LOCAL-00100" summary="refactored webui tests">
+      <created>1658742020036</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
-      <updated>1658008512474</updated>
+      <updated>1658742020036</updated>
     </task>
-    <task id="LOCAL-00013" summary="defined some test tags">
-      <created>1658060981362</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
+    <task id="LOCAL-00101" summary="updated readme">
+      <created>1658742048395</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
       <option name="project" value="LOCAL" />
-      <updated>1658060981362</updated>
+      <updated>1658742048395</updated>
     </task>
-    <task id="LOCAL-00014" summary="temporary test name update">
-      <created>1658062286121</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
+    <task id="LOCAL-00102" summary="refactoring mobile tests and new tests">
+      <created>1658774139254</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1658062286121</updated>
+      <updated>1658774139254</updated>
     </task>
-    <task id="LOCAL-00015" summary="added some tags">
-      <created>1658062862624</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
+    <task id="LOCAL-00103" summary="refactoring mobile tests">
+      <created>1658775844192</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
-      <updated>1658062862624</updated>
+      <updated>1658775844192</updated>
     </task>
-    <task id="LOCAL-00016" summary="reworked and added some tags">
-      <created>1658064476028</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
+    <task id="LOCAL-00104" summary="wait for full loading of app">
+      <created>1658775965025</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
-      <updated>1658064476028</updated>
+      <updated>1658775965025</updated>
     </task>
-    <task id="LOCAL-00017" summary="added some steps descriptions">
-      <created>1658090400121</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
+    <task id="LOCAL-00105" summary="mobile tests refactoring">
+      <created>1658784621638</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
       <option name="project" value="LOCAL" />
-      <updated>1658090400121</updated>
+      <updated>1658784621639</updated>
     </task>
-    <task id="LOCAL-00018" summary="tag is not mandatory now">
-      <created>1658096354632</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
+    <task id="LOCAL-00106" summary="webui tests refactoring">
+      <created>1658784698655</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
       <option name="project" value="LOCAL" />
-      <updated>1658096354632</updated>
+      <updated>1658784698655</updated>
     </task>
-    <task id="LOCAL-00019" summary="tag is not mandatory now 2">
-      <created>1658096468876</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
+    <task id="LOCAL-00107" summary="added baseurl and browsersize to config">
+      <created>1658784935475</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
       <option name="project" value="LOCAL" />
-      <updated>1658096468876</updated>
+      <updated>1658784935475</updated>
     </task>
-    <task id="LOCAL-00020" summary="moved Library opening to beforEach">
-      <created>1658098540484</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
+    <task id="LOCAL-00108" summary="support configurable baseurl">
+      <created>1658785816682</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
       <option name="project" value="LOCAL" />
-      <updated>1658098540484</updated>
+      <updated>1658785816682</updated>
     </task>
-    <task id="LOCAL-00021" summary="removed allure-assertJ, added some DisplayNames">
-      <created>1658100026131</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
+    <task id="LOCAL-00109" summary="small refactoring">
+      <created>1658786904263</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
       <option name="project" value="LOCAL" />
-      <updated>1658100026131</updated>
+      <updated>1658786904263</updated>
     </task>
-    <task id="LOCAL-00022" summary="DisplayNames to Steps">
-      <created>1658101044859</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
+    <task id="LOCAL-00110" summary="small refactoring">
+      <created>1658786923927</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1658101044859</updated>
+      <updated>1658786923927</updated>
     </task>
-    <task id="LOCAL-00023" summary="test webhooks 1">
-      <created>1658138209473</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
+    <task id="LOCAL-00111" summary="accept cookies refactoring">
+      <created>1658788063444</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1658138209473</updated>
+      <updated>1658788063444</updated>
     </task>
-    <task id="LOCAL-00024" summary="test webhooks 2">
-      <created>1658138693143</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
+    <task id="LOCAL-00112" summary="fix base url issue">
+      <created>1658788086170</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1658138693143</updated>
+      <updated>1658788086170</updated>
     </task>
-    <task id="LOCAL-00025" summary="test webhooks 3">
-      <created>1658138827062</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+    <task id="LOCAL-00113" summary="configs refactoring">
+      <created>1658833356035</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
       <option name="project" value="LOCAL" />
-      <updated>1658138827062</updated>
+      <updated>1658833356035</updated>
     </task>
-    <task id="LOCAL-00026" summary="added draft of readme">
-      <created>1658174051620</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+    <task id="LOCAL-00114" summary="turning into parametrized test">
+      <created>1658833507451</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
       <option name="project" value="LOCAL" />
-      <updated>1658174051620</updated>
+      <updated>1658833507451</updated>
     </task>
-    <task id="LOCAL-00027" summary="updated readme">
-      <created>1658174981432</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+    <task id="LOCAL-00115" summary="turning checkHeaderTabsOpening into parametrized test">
+      <created>1658837536270</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
       <option name="project" value="LOCAL" />
-      <updated>1658174981432</updated>
+      <updated>1658837536270</updated>
     </task>
-    <task id="LOCAL-00028" summary="updated readme 2">
-      <created>1658178658051</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
+    <task id="LOCAL-00116" summary="updated name of the job">
+      <created>1658841397059</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
       <option name="project" value="LOCAL" />
-      <updated>1658178658051</updated>
+      <updated>1658841397059</updated>
     </task>
-    <task id="LOCAL-00029" summary="updated readme 3">
-      <created>1658179342803</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
+    <task id="LOCAL-00117" summary="readme updated">
+      <created>1658841440837</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
       <option name="project" value="LOCAL" />
-      <updated>1658179342803</updated>
+      <updated>1658841440837</updated>
     </task>
-    <task id="LOCAL-00030" summary="updated readme 4">
-      <created>1658179440559</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
+    <task id="LOCAL-00118" summary="formatting adjustment">
+      <created>1658841535565</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
       <option name="project" value="LOCAL" />
-      <updated>1658179440559</updated>
+      <updated>1658841535565</updated>
     </task>
-    <task id="LOCAL-00031" summary="updated readme 5">
-      <created>1658179729292</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
+    <task id="LOCAL-00119" summary="readme update">
+      <created>1658849319804</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
       <option name="project" value="LOCAL" />
-      <updated>1658179729292</updated>
+      <updated>1658849319804</updated>
     </task>
-    <task id="LOCAL-00032" summary="updated readme 6">
-      <created>1658180001898</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
+    <task id="LOCAL-00120" summary="readme update">
+      <created>1658849623100</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
       <option name="project" value="LOCAL" />
-      <updated>1658180001898</updated>
+      <updated>1658849623100</updated>
     </task>
-    <task id="LOCAL-00033" summary="updated readme 7">
-      <created>1658180999429</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
+    <task id="LOCAL-00121" summary="readme update">
+      <created>1658850306336</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
       <option name="project" value="LOCAL" />
-      <updated>1658180999429</updated>
+      <updated>1658850306336</updated>
     </task>
-    <task id="LOCAL-00034" summary="updated readme 8">
-      <created>1658181226294</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
+    <task id="LOCAL-00122" summary="ui tests refactoring">
+      <created>1658852773948</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
       <option name="project" value="LOCAL" />
-      <updated>1658181226294</updated>
+      <updated>1658852773948</updated>
     </task>
-    <task id="LOCAL-00035" summary="added idea workspace to share run configurations">
-      <created>1658181375698</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
+    <task id="LOCAL-00123" summary="readme update">
+      <created>1658852793139</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
       <option name="project" value="LOCAL" />
-      <updated>1658181375699</updated>
+      <updated>1658852793139</updated>
     </task>
-    <task id="LOCAL-00036" summary="updated readme">
-      <created>1658182552256</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
+    <task id="LOCAL-00124" summary="readme update">
+      <created>1658852884776</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
       <option name="project" value="LOCAL" />
-      <updated>1658182552256</updated>
+      <updated>1658852884776</updated>
     </task>
-    <task id="LOCAL-00037" summary="updated readme">
-      <created>1658183501689</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
+    <task id="LOCAL-00125" summary="readme update">
+      <created>1658854646020</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
       <option name="project" value="LOCAL" />
-      <updated>1658183501689</updated>
+      <updated>1658854646020</updated>
     </task>
-    <task id="LOCAL-00038" summary="updated readme">
-      <created>1658183776010</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
+    <task id="LOCAL-00126" summary="readme update">
+      <created>1658855036976</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
       <option name="project" value="LOCAL" />
-      <updated>1658183776010</updated>
+      <updated>1658855036976</updated>
     </task>
-    <task id="LOCAL-00039" summary="updated readme">
-      <created>1658183956202</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
+    <task id="LOCAL-00127" summary="readme update">
+      <created>1658855089354</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
       <option name="project" value="LOCAL" />
-      <updated>1658183956202</updated>
+      <updated>1658855089354</updated>
     </task>
-    <task id="LOCAL-00040" summary="updated readme">
-      <created>1658185344131</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+    <task id="LOCAL-00128" summary="readme update">
+      <created>1658855388775</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
       <option name="project" value="LOCAL" />
-      <updated>1658185344131</updated>
+      <updated>1658855388775</updated>
     </task>
-    <task id="LOCAL-00041" summary="updated readme">
-      <created>1658185788973</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
+    <task id="LOCAL-00129" summary="readme update">
+      <created>1658855547733</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
       <option name="project" value="LOCAL" />
-      <updated>1658185788973</updated>
+      <updated>1658855547733</updated>
     </task>
-    <task id="LOCAL-00042" summary="updated readme">
-      <created>1658186072324</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
+    <task id="LOCAL-00130" summary="readme update">
+      <created>1658856037152</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
       <option name="project" value="LOCAL" />
-      <updated>1658186072324</updated>
+      <updated>1658856037152</updated>
     </task>
-    <task id="LOCAL-00043" summary="updated readme">
-      <created>1658226675556</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
+    <task id="LOCAL-00131" summary="readme update">
+      <created>1658859487264</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
       <option name="project" value="LOCAL" />
-      <updated>1658226675556</updated>
+      <updated>1658859487265</updated>
     </task>
-    <task id="LOCAL-00044" summary="extracted users/keys from files to system properties">
-      <created>1658236313108</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
+    <task id="LOCAL-00132" summary="readme update">
+      <created>1658859756224</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
       <option name="project" value="LOCAL" />
-      <updated>1658236313108</updated>
+      <updated>1658859756224</updated>
     </task>
-    <task id="LOCAL-00045" summary="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
-      <created>1658238783688</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
+    <task id="LOCAL-00133" summary="fixes after review">
+      <created>1658906238772</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
       <option name="project" value="LOCAL" />
-      <updated>1658238783688</updated>
+      <updated>1658906238772</updated>
     </task>
-    <task id="LOCAL-00046" summary="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid">
-      <created>1658238850394</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
+    <task id="LOCAL-00134" summary="tags naming change">
+      <created>1658906567157</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
       <option name="project" value="LOCAL" />
-      <updated>1658238850394</updated>
+      <updated>1658906567157</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00135" summary="readme update">
+      <created>1658906972942</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1658906972942</updated>
+    </task>
+    <task id="LOCAL-00136" summary="refactoring">
+      <created>1658909404084</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1658909404084</updated>
+    </task>
+    <task id="LOCAL-00137" summary="extracted apiBaseUrl to System Properties">
+      <created>1658912103197</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1658912103197</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -658,32 +691,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="defined some test tags" />
-    <MESSAGE value="temporary test name update" />
-    <MESSAGE value="added some tags" />
-    <MESSAGE value="reworked and added some tags" />
-    <MESSAGE value="added some steps descriptions" />
-    <MESSAGE value="tag is not mandatory now" />
-    <MESSAGE value="tag is not mandatory now 2" />
-    <MESSAGE value="moved Library opening to beforEach" />
-    <MESSAGE value="removed allure-assertJ, added some DisplayNames" />
-    <MESSAGE value="DisplayNames to Steps" />
-    <MESSAGE value="test webhooks 1" />
-    <MESSAGE value="test webhooks 2" />
-    <MESSAGE value="test webhooks 3" />
-    <MESSAGE value="added draft of readme" />
-    <MESSAGE value="updated readme 2" />
-    <MESSAGE value="updated readme 3" />
-    <MESSAGE value="updated readme 4" />
-    <MESSAGE value="updated readme 5" />
-    <MESSAGE value="updated readme 6" />
-    <MESSAGE value="updated readme 7" />
-    <MESSAGE value="updated readme 8" />
-    <MESSAGE value="added idea workspace to share run configurations" />
+    <MESSAGE value="refactored mobile tests" />
+    <MESSAGE value="refactored webui tests" />
     <MESSAGE value="updated readme" />
-    <MESSAGE value="extracted users/keys from files to system properties" />
-    <MESSAGE value="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid" />
-    <option name="LAST_COMMIT_MESSAGE" value="deviceName and PlatformVersion extracted to config, fixed video for browser in selenoid" />
+    <MESSAGE value="refactoring mobile tests and new tests" />
+    <MESSAGE value="refactoring mobile tests" />
+    <MESSAGE value="wait for full loading of app" />
+    <MESSAGE value="mobile tests refactoring" />
+    <MESSAGE value="webui tests refactoring" />
+    <MESSAGE value="added baseurl and browsersize to config" />
+    <MESSAGE value="support configurable baseurl" />
+    <MESSAGE value="small refactoring" />
+    <MESSAGE value="accept cookies refactoring" />
+    <MESSAGE value="fix base url issue" />
+    <MESSAGE value="configs refactoring" />
+    <MESSAGE value="turning into parametrized test" />
+    <MESSAGE value="turning checkHeaderTabsOpening into parametrized test" />
+    <MESSAGE value="updated name of the job" />
+    <MESSAGE value="readme updated" />
+    <MESSAGE value="formatting adjustment" />
+    <MESSAGE value="ui tests refactoring" />
+    <MESSAGE value="fixes after review" />
+    <MESSAGE value="tags naming change" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="extracted apiBaseUrl to System Properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="extracted apiBaseUrl to System Properties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
