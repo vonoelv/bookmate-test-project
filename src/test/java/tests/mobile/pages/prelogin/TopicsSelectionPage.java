@@ -10,8 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class TopicsSelectionPage {
-    private final ElementsCollection topics =
-            $$(AppiumBy.xpath("//android.widget.LinearLayout[@resource-id='com.bookmate:id/bubble_container']/android.widget.TextView[@resource-id='com.bookmate:id/text_view_content']"));
+    private final ElementsCollection topics = $$(AppiumBy.xpath(
+                    "//android.widget.LinearLayout[@resource-id='com.bookmate:id/bubble_container']" +
+                    "/android.widget.TextView[@resource-id='com.bookmate:id/text_view_content']"));
     private final SelenideElement continueButton = $(AppiumBy.id("com.bookmate:id/next"));
     private static final BooksSelectionPage booksSelectionPage = new BooksSelectionPage();
 
